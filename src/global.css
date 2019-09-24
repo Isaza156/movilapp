@@ -21,3 +21,9 @@ code {
 .color-orange{
   color: #f28500;
 }
+.bg-home{
+  background-image: url('./components/images/home.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
