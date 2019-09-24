@@ -4,7 +4,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-dark bg-light">
+        <nav className="navbar navbar-dark bg-white fixed-top border-bottom">
           <a className="navbar-brand" href="/">
           <h2 className="color-orange">
           MovilApp

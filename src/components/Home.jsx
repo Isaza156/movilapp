@@ -6,7 +6,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <main className="mb-5">
+        <main className="my-5">
 
           <div className="bg-color-home">
             <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-home">
@@ -35,7 +35,7 @@ class Home extends React.Component {
           </div>
           <div className="col-md-5 mr-auto">
             <p className="lead text-dark">
-              Somos una app de movilidad en donde podrás realizar tus <strong>QUEJAS</strong> o <strong>SUGERENCIAS</strong> sobre el medio de transporte en el que te movilizas
+              Somos una app de movilidad en donde podrás realizar tus <strong>QUEJAS</strong> o <strong>SUGERENCIAS</strong> sobre el medio de transporte en el que te movilizas.
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ class Home extends React.Component {
               <div className="media-body">
                 <h3 className="h4">Sugerencias</h3>
                 <p className="text-dark text-left">
-                  Puedes realizar sugerencias para los medios de transporte que consideras que servirian para mejorar la movilidad en Medellín.
+                  Podrás realizar sugerencias de medios de transporte que consideres servirian para mejorar tú movilidad en Medellín.
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ class Home extends React.Component {
               <div className="media-body">
                 <h3 className="h4">Quejas</h3>
                 <p className="text-dark text-left">
-                  Si tienes alguna queja sobre el medio de transporte que utilizas este es el mejor lugar para hacerla, haremos llegar todas tus quejas a las entidades encargadas.
+                  Si tienes alguna queja sobre el medio de transporte que utilizas, este es el mejor lugar para hacerlo, haremos llegar todas tus inconformidades a las entidades encargadas.
                 </p>
               </div>
             </div>
@@ -86,8 +86,8 @@ class Home extends React.Component {
                     <h3 className="mb-0">Vías Robledo</h3>
                     <div className="mb-1 text-muted">Sep 12</div>
                     <p className="card-text mb-auto">
-                      Logramos que @transitomedellin pusiera mas agentes en las
-                      vías de robledo a petición de 5000 usuarios de MovilApp
+                      Logramos que @TransitoMedellin pusiera mas agentes en las
+                      vías de robledo a petición de mas de 5.000 usuarios de MovilApp.
                     </p>
                     <a href="/" className="stretched-link">
                       Continuar leyendo
@@ -106,7 +106,7 @@ class Home extends React.Component {
                     <div className="mb-1 text-muted">Sep 18</div>
                     <p className="card-text mb-auto">
                       Se han instalado mas de 20 buses nuevos en la estación
-                      acevedo que llevaran a distintos lugares de la ciudad
+                      Acevedo que te llevarán a distintos lugares de la ciudad.
                     </p>
                     <a href="/" className="stretched-link">
                       Continuar leyendo
