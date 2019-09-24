@@ -12,7 +12,7 @@ class Splash extends React.Component {
             <h1>MovilApp</h1>
           </div>
           <div className="mb-5">
-          <Link to="/">
+          <Link to="/move">
           <img
               src={Logo}
               alt="Logo"
