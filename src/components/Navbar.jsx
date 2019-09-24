@@ -1,0 +1,50 @@
+import React from "react";
+
+class Navbar extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <nav className="navbar navbar-dark bg-light">
+          <a className="navbar-brand" href="/">
+          <h2 className="color-orange">
+          MovilApp
+          </h2> 
+          </a>
+          <button
+            className="navbar-toggler collapsed bg-orange"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapse"
+            aria-controls="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="navbar-collapse collapse" id="collapse">
+            <ul className="navbar-nav mr-auto ">
+              <li className="nav-item active">
+                <a className="nav-link text-dark" href="/">
+                  Mi perfil <span className="sr-only"></span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-dark" href="/">
+                  Mis aportes
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-dark" href="/">
+                  Ayuda
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </React.Fragment>
+    );
+  }
+}
+
+export default Navbar;
