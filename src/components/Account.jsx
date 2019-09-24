@@ -20,42 +20,42 @@ class Form extends Component {
                       <input
                         type="text"
                         id="inputName"
-                        className="form-control input-text  mb-1 input-hover"
+                        className="form-control input-text mb-2 input-hover"
                         placeholder="Nombre de usuario* "
                         required
                       />
                       <input
                         type="email"
                         id="inputEmail"
-                        className="form-control input-text  mb-1 input-hover"
+                        className="form-control input-text mb-2 input-hover"
                         placeholder="Correo electrónico* "
                         required
                       />
                       <input
                         type="tel"
                         id="inputPhone"
-                        className="form-control input-text  mb-1 input-hover"
+                        className="form-control input-text mb-2 input-hover"
                         placeholder="Numero de teléfono* "
                         required
                       />
                       <input
                         type="password"
                         id="inputPassword"
-                        className="form-control input-text  mb-1  input-hover"
+                        className="form-control input-text mb-2 input-hover"
                         placeholder="Contraseña* "
                         required
                       />
                       <input
                         type="password"
                         id="confirmPassword"
-                        className="form-control input-text  mb-1  input-hover"
+                        className="form-control input-text mb-2 input-hover"
                         placeholder="Confirmar contraseña* "
                         required
                       />
                       <input
                         type="checkbox"
                         id="checkTerms"
-                        className="mt-2 mb-1 input-hover"
+                        className="mt-3 mb-2 input-hover"
                         placeholder="Confirmar contraseña* "
                         required
                       />

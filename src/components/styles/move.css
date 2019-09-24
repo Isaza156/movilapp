@@ -1,7 +1,6 @@
 .line {
   border: none !important;
-  border-bottom: 1px solid !important;
-  background-color: #eff1f8 !important;
+  border-bottom: 1px solid !important; 
 }
 .btn-login {
   color: #f28500 !important;

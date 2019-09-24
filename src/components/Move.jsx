@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './styles/move.css';
 
 class Move extends React.Component {
@@ -92,7 +93,7 @@ class Move extends React.Component {
               <div className="custom-control custom-checkbox mr-sm-2 mb-3">
                 <input
                   type="checkbox"
-                  className="custom-control-input"
+                  className="custom-control-input text-danger"
                   id="customControlAutosizing7"
                 />
                 <label
@@ -137,7 +138,7 @@ class Move extends React.Component {
           </div>
           <hr />
           <div className="container form-check">
-            <div className="custom-control custom-checkbox mr-sm-2 mb-3">
+            <div className="custom-control custom-radio mr-sm-2 mb-3">
               <input
                 type="radio"
                 name="check"
@@ -148,11 +149,11 @@ class Move extends React.Component {
                 className="custom-control-label"
                 htmlFor="customControlAutosizing10"
               >
-                Uso el transporte anterior para dirigirme a mi sitio de
+                Uso el medio de transporte para dirigirme a mi sitio de
                 trabajo/estudio.
               </label>
             </div>
-            <div className="custom-control custom-checkbox mr-sm-2 mb-3">
+            <div className="custom-control custom-radio mr-sm-2 mb-3">
               <input
                 type="radio"
                 name="check"
@@ -163,7 +164,7 @@ class Move extends React.Component {
                 className="custom-control-label"
                 htmlFor="customControlAutosizing11"
               >
-                Uso el transporte anterior como herramienta de trabajo.
+                Uso el medio de transporte como herramienta de trabajo.
               </label>
             </div>
           </div>
@@ -202,7 +203,10 @@ class Move extends React.Component {
             </div>
           </div>
           <div className="container text-center">
+          <Link to="/home">
           <button type="button" className="btn btn-lg mb-5 btn-login">Iniciar</button>
+          </Link>
+       
           </div>
         </div>
       </React.Fragment>

@@ -21,7 +21,7 @@ class Form extends Component {
                         type="email"
                         id="inputEmail"
                         className="form-control input-text  mb-3 text-center input-hover"
-                        placeholder="Correo electrónico o número de teléfono"
+                        placeholder="Correo Electrónico"
                         required
                       />
                       <input
