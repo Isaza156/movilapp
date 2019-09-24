@@ -41,13 +41,13 @@ class Form extends Component {
                         </button>
                       </Link>
                       <br />
-                      <Link to="/" style={{ textDecoration: "none" }}>
+                      <Link to="/home" style={{ textDecoration: "none" }}>
                         <button className="btn btn-lg btn-login btn-block rounded-pill">
                           <i className="fab fa-google"></i> Sign in with Google
                         </button>
                       </Link>
                       <br />
-                      <Link to="/reset" className="link-form text-login">
+                      <Link to="/resetPassword" className="link-form text-login">
                         Olvidé mi contraseña
                       </Link>
                       <br />
