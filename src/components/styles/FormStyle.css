@@ -36,3 +36,8 @@
 .input-hover:hover:active{
   border-color: #f28500 !important;
 }
+
+.img-register {
+  height: 100px;
+  width: 100px;
+}
