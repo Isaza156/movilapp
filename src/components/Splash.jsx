@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "./images/logo.png";
 import "./styles/splash.css";
 
@@ -11,13 +12,15 @@ class Splash extends React.Component {
             <h1>MovilApp</h1>
           </div>
           <div className="mb-5">
-            <img
+          <Link to="/">
+          <img
               src={Logo}
               alt="Logo"
               className="borde"
               width="300"
               height="250"
             />
+          </Link>
           </div>
           <div className="mb-5">
             <h4>Por una mejor movilidad</h4>
