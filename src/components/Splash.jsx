@@ -12,13 +12,13 @@ class Splash extends React.Component {
             <h1>MovilApp</h1>
           </div>
           <div className="mb-5">
-          <Link to="/">
+          <Link to="/login">
           <img
               src={Logo}
               alt="Logo"
               className="borde"
-              width="300"
-              height="250"
+              width="200"
+              height="200"
             />
           </Link>
           </div>
