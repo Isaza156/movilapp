@@ -10,15 +10,17 @@ class ValidateCode extends Component {
           <div className="container">
             <div className="brand">
               <div className="row">
-                
                 <div className="col-lg-8 col-sm-12 col-xs-12 ">
                   <div className="register Login text-center mt-5"></div>
                   <div className="text-center">
-                  <i className="fas fa-unlock-alt fa-5x text-login m-5"></i>
+                    <i className="fas fa-unlock-alt fa-5x text-login m-5"></i>
                     <h2>Ingrese el código de seguridad</h2>
-
+                    <div className="container text-justify">
+                              Hemos enviado un código de seguridad a tu correo
+                              electrónico. Digita
+                              tu código para reestablecer tu contraseña
+                            </div>
                     <form className="mt-5 ml-5 mr-5 pb-3 ">
-                      
                       <input
                         type="text"
                         id="SecutiryCode"
@@ -26,12 +28,10 @@ class ValidateCode extends Component {
                         placeholder="Codigo de seguridad* "
                         required
                       />
-                      
-                     
 
                       <br />
                       <div className="d-flex justify-content-end">
-                        <Link to={"/"}>
+                        <Link to={"/resetpassword"}>
                           <button
                             className="btn btn-outline-secondary  mt-4 mb-3 mr-1"
                             type="submit"
@@ -39,17 +39,17 @@ class ValidateCode extends Component {
                             No recibí mi código
                           </button>
                         </Link>
-
-                        <button
-                          className="btn btn-login  text-login mt-4 mb-3 "
-                          type="submit"
-                          
-                        >
-                          Validar mi código
-                        </button>
+                        <Link to="/newpassword">
+                          <button
+                            className="btn btn-login  text-login mt-4 mb-3 "
+                            type="submit"
+                          >
+                            Validar mi código
+                          </button>
+                        </Link>
                       </div>
                       <br />
-                      
+
                       <br />
 
                       <br />
@@ -66,4 +66,4 @@ class ValidateCode extends Component {
   }
 }
 
-export default ValidateCode ;
+export default ValidateCode;

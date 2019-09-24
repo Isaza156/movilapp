@@ -36,10 +36,10 @@ class NewPassword extends Component {
                      
 
                       <br />
-                      <Link to={"/"}>
+                      <Link to="/login">
                         <button
                           className="btn btn-login btn-lg text-login mt-4 mb-3"
-                          type="submit"
+                         
                         >
                           Restablecer contraseña
                         </button>

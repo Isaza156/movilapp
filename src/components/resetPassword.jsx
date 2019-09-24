@@ -35,67 +35,22 @@ class Password extends Component {
 
                       <br />
                       <div className="d-flex justify-content-end">
-                        <Link to={"/"}>
-                          <button
-                            className="btn btn-outline-secondary  mt-4 mb-3 mr-1"
-                            type="submit"
-                          >
+                        <Link to="/login">
+                          <button className="btn btn-outline-secondary  mt-4 mb-3 mr-1">
                             Cancelar
                           </button>
                         </Link>
-
-                        <button
-                          className="btn btn-login  text-login mt-4 mb-3 "
-                          type="submit"
-                          data-toggle="modal"
-                          data-target="#ResetPassword"
-                        >
-                          Siguiente
-                        </button>
+                        <Link to="/validatecode">
+                          <button
+                            className="btn btn-login  text-login mt-4 mb-3 "
+                            type="submit"
+                            data-toggle="modal"
+                            data-target="#ResetPassword"
+                          >
+                            Siguiente
+                          </button>
+                        </Link>
                       </div>
-
-                      <div
-                        class="modal fade"
-                        id="ResetPassword"
-                        tabindex="-1"
-                        role="dialog"
-                        aria-labelledby="resetPaswordText"
-                        aria-hidden="true"
-                      >
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="resetPaswordText">
-                                Reestablecer contraseña
-                              </h5>
-                              <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                              >
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body text-justify">
-                              Hemos enviado un código de seguridad a tu correo
-                              electrónico ve a Restablecer contraseña y digita
-                              tu código para crear tu nueva contraseña
-                            </div>
-                            <div class="modal-footer">
-                            <Link to={"/"}>
-                              <button
-                                type="button"
-                                class="btn btn-login  text-login mt-4 mb-3 "
-                              >
-                                Restablecer contraseña
-                              </button>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
                       <br />
                     </form>
                   </div>
