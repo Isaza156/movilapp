@@ -1,40 +1,34 @@
-
 .btn-login {
-    color: #f28500 !important;
-    border-color: #f28500 !important;
-    background-color: white !important;
-    text-decoration: none;
-    
-  }
-  
-  .btn-login:hover {
-    color: #fff !important;
-    background-color: #f28500 !important;
-    border-color: #f28500 !important;
-  }
-  
-  .form-control {
-    border-radius: 1rem;
-    color: white;
-  }
-  
-  .link-form {
-    font-size: 0.8rem;
-  }
-  
-  .img-login {
-    height: 200px;
-    width: 200px;
-  }
-  
-  .bg-login {
-    background-color: #eff1f8;
-  }
-  
-  .text-login {
-    color: #f28500 !important;
-  }
-  
-  .input-hover:hover:active{
-    border-color: #f28500 !important;
-  }
+  color: #f28500 !important;
+  border-color: #f28500 !important;
+  background-color: white !important;
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  color: #fff !important;
+  background-color: #f28500 !important;
+  border-color: #f28500 !important;
+}
+
+.form-control {
+  border-radius: 1rem;
+  color: white;
+}
+
+.link-form {
+  font-size: 0.8rem;
+}
+
+.img-login {
+  height: 200px;
+  width: 200px;
+}
+
+.text-login {
+  color: #f28500 !important;
+}
+
+.input-hover:hover:active {
+  border-color: #f28500 !important;
+}
