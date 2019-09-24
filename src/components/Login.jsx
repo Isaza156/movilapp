@@ -32,7 +32,7 @@ class Form extends Component {
                         required
                       />
                       <br />
-                      <Link to="/move" style={{ textDecoration: "none" }}>
+                      <Link to="/home" style={{ textDecoration: "none" }}>
                         <button
                           className="btn btn-login btn-lg  btn-block text-login rounded-pill"
                           type="submit"

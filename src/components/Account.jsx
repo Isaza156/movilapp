@@ -78,16 +78,16 @@ class Form extends Component {
                       </span>
 
                       <br />
-                      <Link to="/">
+                      <Link to="/move">
                         <button
-                          className="btn btn-login btn-lg text-login mt-4 mb-3"
+                          className="btn btn-login btn-lg text-login mt-4 mb-3 rounded-pill"
                           type="submit"
                         >
                           Crear cuenta
                         </button>
                       </Link>
                       <br />                     
-                      <Link to="/login" className="link-form text-login">
+                      <Link to="/login" className="link-form text-login ">
                         Ya tengo una cuenta. Iniciar sesión
                       </Link>
                       <br />
