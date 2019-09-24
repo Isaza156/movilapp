@@ -26,7 +26,7 @@
 }
 
 .bg-login {
-  background-color: #eff1f8;
+  background-color: #fff;
 }
 
 .text-login {
@@ -40,4 +40,19 @@
 .img-register {
   height: 100px;
   width: 100px;
+}
+
+.input-text{
+  border: none !important;
+  border-bottom: 0.5px solid #858581 !important;
+  background-color:  white !important;
+
+}
+
+.vertical-center {
+  min-height: 100%; 
+  min-height: 100vh;     
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
