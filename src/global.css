@@ -27,3 +27,9 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.input-text{
+  border: none !important;
+  border-bottom: 0.5px solid #858581 !important;
+  background-color:  #eff1f8 !important;
+ }

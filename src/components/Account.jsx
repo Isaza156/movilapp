@@ -17,76 +17,62 @@ class Form extends Component {
                     <i className="fas fa-user-circle fa-5x text-login"></i>
 
                     <form className="mt-5 ml-5 mr-5 pb-3">
-                      <div className="input-group mb-1">
-                        <input
-                          type="text"
-                          className="form-control input-sm mr-1  input-hover"
-                          placeholder="Nombre* "
-                        />
-                        <span className="input-group-btn  input-hover"></span>
-                        <input
-                          type="text"
-                          className="form-control input-sm"
-                          placeholder="Apellidos* "
-                        />
-                      </div>
                       <input
                         type="text"
                         id="inputName"
-                        className="form-control mb-1 input-hover"
+                        className="form-control input-text  mb-1 input-hover"
                         placeholder="Nombre de usuario* "
                         required
                       />
                       <input
                         type="email"
                         id="inputEmail"
-                        className="form-control mb-1 input-hover"
+                        className="form-control input-text  mb-1 input-hover"
                         placeholder="Correo electrónico* "
                         required
                       />
                       <input
                         type="tel"
                         id="inputPhone"
-                        className="form-control mb-1 input-hover"
+                        className="form-control input-text  mb-1 input-hover"
                         placeholder="Numero de teléfono* "
                         required
                       />
                       <input
                         type="password"
                         id="inputPassword"
-                        className="form-control mb-1  input-hover"
+                        className="form-control input-text  mb-1  input-hover"
                         placeholder="Contraseña* "
                         required
                       />
                       <input
                         type="password"
                         id="confirmPassword"
-                        className="form-control mb-1  input-hover"
+                        className="form-control input-text  mb-1  input-hover"
                         placeholder="Confirmar contraseña* "
                         required
                       />
                       <input
                         type="checkbox"
                         id="checkTerms"
-                        className=" mb-1  input-hover"
+                        className="mt-2 mb-1 input-hover"
                         placeholder="Confirmar contraseña* "
                         required
                       />
-                      <span className="link-form text-login mx-1">
-                     
-                      <small> He leído y acepto los terminos y condiciones </small>  
+                      <span className="link-form text-login mx-1 ">
+                      <small> He leído y acepto los terminos y condiciones </small> 
                       </span>
 
                       <br />
                       <Link to="/move">
                         <button
-                          className="btn btn-login btn-lg text-login mt-4 mb-3 rounded-pill"
+                          className="btn btn-login btn-lg text-login mt-5 mb-3 rounded-pill"
                           type="submit"
                         >
                           Crear cuenta
                         </button>
                       </Link>
-                      <br />                     
+                      <br />
                       <Link to="/login" className="link-form text-login ">
                         Ya tengo una cuenta. Iniciar sesión
                       </Link>

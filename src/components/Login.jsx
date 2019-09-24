@@ -20,14 +20,14 @@ class Form extends Component {
                       <input
                         type="email"
                         id="inputEmail"
-                        className="form-control mb-3 text-center input-hover"
+                        className="form-control input-text  mb-3 text-center input-hover"
                         placeholder="Correo electrónico o número de teléfono"
                         required
                       />
                       <input
                         type="password"
                         id="inputPassword"
-                        className="form-control mb-3 text-center input-hover"
+                        className="form-control input-text  mb-3 text-center input-hover"
                         placeholder="Contraseña"
                         required
                       />
