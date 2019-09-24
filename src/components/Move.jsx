@@ -1,4 +1,5 @@
 import React from "react";
+import './styles/move.css';
 
 class Move extends React.Component {
   render() {
@@ -70,7 +71,7 @@ class Move extends React.Component {
                   className="custom-control-label"
                   htmlFor="customControlAutosizing5"
                 >
-                  Otro
+                  Plataformas
                 </label>
               </div>
             </div>
@@ -114,7 +115,7 @@ class Move extends React.Component {
                   Carro
                 </label>
               </div>
-              <div className="custom-control custom-checkbox mr-sm-2 mb-3">
+              <div className="custom-control custom-checkbox mr-sm-2 mb-1">
                 <input
                   type="checkbox"
                   className="custom-control-input"
@@ -124,35 +125,84 @@ class Move extends React.Component {
                   className="custom-control-label"
                   htmlFor="customControlAutosizing9"
                 >
-                  Plataformas
+                  Otro
                 </label>
               </div>
               <input
-                className="form-control text-center"
+                className="form-control line"
                 type="text"
                 placeholder="¿Cuál?"
               />
             </div>
           </div>
           <hr />
-          <div className="row">
-              <p>
-              Uso el transporte para dirigirme a mi sitio de trabajo/estudio
-              </p>
-              <div className="custom-control custom-checkbox mr-sm-2 mb-3">
-                <input
-                  type="checkbox"
-                  className="custom-control-input"
-                  id="customControlAutosizing10"
-                />
-                <label
-                  className="custom-control-label"
-                  htmlFor="customControlAutosizing10"
-                >
-                  
-                </label>
+          <div className="container form-check">
+            <div className="custom-control custom-checkbox mr-sm-2 mb-3">
+              <input
+                type="radio"
+                name="check"
+                className="custom-control-input"
+                id="customControlAutosizing10"
+              />
+              <label
+                className="custom-control-label"
+                htmlFor="customControlAutosizing10"
+              >
+                Uso el transporte anterior para dirigirme a mi sitio de
+                trabajo/estudio.
+              </label>
+            </div>
+            <div className="custom-control custom-checkbox mr-sm-2 mb-3">
+              <input
+                type="radio"
+                name="check"
+                className="custom-control-input"
+                id="customControlAutosizing11"
+              />
+              <label
+                className="custom-control-label"
+                htmlFor="customControlAutosizing11"
+              >
+                Uso el transporte anterior como herramienta de trabajo.
+              </label>
+            </div>
+          </div>
+          <hr />
+          <div className="container text-center">
+            <div className="mb-5">
+              <h4>Información del vehiculo (Opcional)</h4>
+            </div>
+            <div>
+              <div className="row mb-4">
+                <div className="col-6">
+                  <h6>Cilindraje</h6>
+                  <input
+                    type="text"
+                    className="form-control text-center line"
+                    placeholder="125cc"
+                  />
+                </div>
+                <div className="col-6">
+                  <h6>Modelo</h6>
+                  <input
+                    type="text"
+                    className="form-control text-center line"
+                    placeholder="2019"
+                  />
+                </div>
               </div>
-              
+              <div className="mb-4">
+                <h6>Pasajeros promedio en el recorrido</h6>
+                <input
+                  type="text"
+                  className="form-control text-center line"
+                  placeholder="2"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="container text-center">
+          <button type="button" className="btn btn-lg mb-5 btn-login">Large button</button>
           </div>
         </div>
       </React.Fragment>
