@@ -1,0 +1,16 @@
+.center{   
+    margin-top: 100px;
+}
+h1 {
+  color: orange;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.borde{       
+  border-radius: 50%;
+  border-color: blue;
+}
