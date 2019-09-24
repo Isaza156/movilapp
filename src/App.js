@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Layout from "./components/Layout";
 import Splash from "./components/Splash";
 import Login from "./components/Login";
+import Account from './components/Account.jsx'
 import NotFound from "./pages/NotFound";
 
 const App = () => {
@@ -11,7 +12,9 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Splash} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/account" component={Account} />
         <Layout>
+          
           <Route component={NotFound} />
         </Layout>
       </Switch>
