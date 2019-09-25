@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Password from './components/ResetPassword'
 import NewPassword from './components/NewPassword.jsx'
 import ValidateCode from './components/ValidateCode'
+import Pqrs from "./components/Pqrs";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route exact path="/validatecode" component={ValidateCode} />
         <Layout>
         <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Pqrs} />
           <Route component={NotFound} />
         </Layout>
       </Switch>
