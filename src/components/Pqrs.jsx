@@ -5,7 +5,7 @@ class Pqrs extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-fluid text-right mt-3">
+        <div className="container-fluid text-right pt-5 mt-5">
           <a href="/" className="align-top mx-3 text-dark">
             Sugerencias
           </a>
@@ -57,8 +57,8 @@ class Pqrs extends React.Component {
           <div className="card mt-3">
             <div className="card-body">
                 <div className="d-flex justify-content-between">
-                <small class="form-text text-muted">TRÁNSITO/VÍAS</small>
-                <small class="form-text text-muted">15 min</small>
+                <small className="form-text text-muted">TRÁNSITO/VÍAS</small>
+                <small className="form-text text-muted">15 min</small>
                 </div>
               <h5 className="card-title">Accidentes por huecos</h5>
               <p className="card-text">

@@ -25,7 +25,7 @@ const App = () => {
           <Route exact path="/validatecode" component={ValidateCode} />
         <Layout>
         <Route exact path="/home" component={Home} />
-        <Route exact path="/" component={Pqrs} />
+        <Route exact path="/pqrs" component={Pqrs} />
           <Route component={NotFound} />
         </Layout>
       </Switch>

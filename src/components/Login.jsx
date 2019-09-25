@@ -9,14 +9,14 @@ class Form extends Component {
       <React.Fragment>
         <div className="bg-login">
           <div className="container">
-            <div className="brand mt-5">
+            <div className="brand mt-2">
               <div className="row">
                 <div className="col-lg-2 d-none d-lg-block "></div>
                 <div className="col-lg-8 col-sm-12 col-xs-12 ">
                   <div className="register Login text-center"></div>
                   <div className="text-center">
                     <img className="img-login " src={logo} alt="logo" />
-                    <form className="mt-5 ml-5 mr-5 pb-3">
+                    <form className="mt-4 ml-5 mr-5 pb-3">
                       <input
                         type="email"
                         id="inputEmail"

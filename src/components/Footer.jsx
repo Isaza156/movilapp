@@ -10,22 +10,22 @@ class Footer extends React.Component {
               <div className="col-4 col-md-4">
                 <i className="fas fa-road color-orange fa-2x"></i>
                 <Link to="/" className=" mt-3 text-dark">
-                  {" "}
-                  <br /> Trayectos{" "}
+                  
+                  <br /> Trayectos
                 </Link>
               </div>
               <div className="col-4 col-md-4">
                 <i className="fas fa-home color-orange fa-2x"></i>
-                <Link to="/" className=" mt-3 text-dark">
-                  {" "}
-                  <br /> Inicio{" "}
+                <Link to="/home" className=" mt-3 text-dark">
+                  
+                  <br /> Inicio
                 </Link>
               </div>
               <div className="col-4 col-md-4">
                 <i className="fas fa-paper-plane color-orange fa-2x"></i>
-                <Link to="/" className=" mt-3 text-dark">
-                  {" "}
-                  <br /> Pqrs{" "}
+                <Link to="/pqrs" className=" mt-3 text-dark">
+                 
+                  <br /> Pqrs
                 </Link>
               </div>
             </div>
