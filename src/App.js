@@ -4,13 +4,14 @@ import Layout from "./components/Layout";
 import Splash from "./components/Splash";
 
 import NotFound from "./pages/NotFound";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Layout>
         <Switch>
-          <Route exact path="/" component={Splash} />>
+          <Route exact path="/" component={Contact} />
           <Route component={NotFound} />
         </Switch>
       </Layout>
