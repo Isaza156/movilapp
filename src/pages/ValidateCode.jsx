@@ -14,10 +14,9 @@ class ValidateCode extends Component {
       <React.Fragment>
         <div className="bg-login">
           <div className="container wow fadeIn">
-            <div className="brand">
               <div className="row">
-                <div className="col-lg-8 col-sm-12 col-xs-12 ">
-                  <div className="register Login text-center mt-5"></div>
+                <div className="col-lg-8 col-sm-12 col-xs-12 m-auto">
+                  <div className="register Login text-center mt-4"></div>
                   <div className="text-center">
                     <i className="fas fa-unlock-alt fa-5x text-login m-5"></i>
                     <h2>Ingrese el código de seguridad</h2>
@@ -63,10 +62,8 @@ class ValidateCode extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 d-none d-lg-block fixed-bottom "></div>
             </div>
           </div>
-        </div>
       </React.Fragment>
     );
   }

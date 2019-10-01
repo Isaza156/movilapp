@@ -14,10 +14,8 @@ class Password extends Component {
       <React.Fragment>
         <div className="bg-login wow fadeIn">
           <div className="container ">
-            <div className="brand">
               <div className="row">
-                <div className="col-lg-2 d-none d-lg-block "></div>
-                <div className="col-lg-8 col-sm-12 col-xs-12 ">
+                <div className="col-lg-8 col-sm-12 col-xs-12 m-auto">
                   <div className="register Login text-center mt-5"></div>
                   <div className="text-center">
                     <i className="fas fa-unlock-alt fa-5x text-login m-5"></i>
@@ -62,9 +60,7 @@ class Password extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 d-none d-lg-block fixed-bottom "></div>
             </div>
-          </div>
         </div>
       </React.Fragment>
     );
