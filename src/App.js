@@ -15,6 +15,7 @@ import Faqs from "./pages/Faqs";
 import Listen from "./pages/Listen";
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
+import Comments from "./components/Comments";
 
 const App = () => {
   return (
@@ -29,12 +30,12 @@ const App = () => {
         <Route exact path="/validatecode" component={ValidateCode} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/faqs" component={Faqs} />
+        <Route exact path="/hello" component={Comments} />
         <Layout>
           <Route exact path="/home" component={Home} />
           <Route exact path="/listen" component={Listen} />
           <Route exact path="/suggestions" component={Suggestions} />
           <Route exact path="/pqrs" component={Pqrs} />
-          <Route component={NotFound} />
         </Layout>
       </Switch>
     </BrowserRouter>
