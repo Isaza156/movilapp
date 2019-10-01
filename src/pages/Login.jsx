@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import logo from "./images/logo.png";
-import "./styles/login.css";
+import logo from "../components/images/logo.png";
+import "../components/styles/login.css";
 
 class Form extends Component {
   render() {
@@ -47,7 +47,10 @@ class Form extends Component {
                         </button>
                       </Link>
                       <br />
-                      <Link to="/resetPassword" className="link-form text-login">
+                      <Link
+                        to="/resetPassword"
+                        className="link-form text-login"
+                      >
                         Olvidé mi contraseña
                       </Link>
                       <br />

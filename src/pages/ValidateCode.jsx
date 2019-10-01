@@ -1,56 +1,57 @@
 import React, { Component } from "react";
-import "./styles/reset.css";
+import "../components/styles/reset.css";
 import { Link } from "react-router-dom";
 
-class Password extends Component {
+class ValidateCode extends Component {
   render() {
     return (
       <React.Fragment>
         <div className="bg-login">
-          <div className="container ">
+          <div className="container">
             <div className="brand">
               <div className="row">
-                <div className="col-lg-2 d-none d-lg-block "></div>
                 <div className="col-lg-8 col-sm-12 col-xs-12 ">
                   <div className="register Login text-center mt-5"></div>
                   <div className="text-center">
                     <i className="fas fa-unlock-alt fa-5x text-login m-5"></i>
-                    <div className="p-2">
-                      <h2>Olvidé mi contraseña</h2>
-                      <p className="text-justify">
-                        Podemos ayudarte a restablecer tu contraseña y la
-                        información de seguridad. Primero escribe tu correo
-                        electrónico.
-                      </p>
+                    <h2>Ingrese el código de seguridad</h2>
+                    <div className="container text-justify">
+                      Hemos enviado un código de seguridad a tu correo
+                      electrónico. Digita tu código para reestablecer tu
+                      contraseña
                     </div>
-
-                    <form className="m-2 ">
+                    <form className="mt-5 ml-5 mr-5 pb-3 ">
                       <input
-                        type="email"
-                        id="inputEmail"
-                        className="form-control input-text  input-hover"
-                        placeholder="Correo electrónico* "
+                        type="text"
+                        id="SecutiryCode"
+                        className="form-control input-text mb-1  input-hover"
+                        placeholder="Codigo de seguridad* "
                         required
                       />
 
                       <br />
                       <div className="d-flex justify-content-end">
-                        <Link to="/login">
-                          <button className="btn btn-outline-secondary  mt-4 mb-3 mr-1">
-                            Cancelar
+                        <Link to={"/resetpassword"}>
+                          <button
+                            className="btn btn-outline-secondary  mt-4 mb-3 mr-1"
+                            type="submit"
+                          >
+                            No recibí mi código
                           </button>
                         </Link>
-                        <Link to="/validatecode">
+                        <Link to="/newpassword">
                           <button
                             className="btn btn-login  text-login mt-4 mb-3 "
                             type="submit"
-                            data-toggle="modal"
-                            data-target="#ResetPassword"
                           >
-                            Siguiente
+                            Validar mi código
                           </button>
                         </Link>
                       </div>
+                      <br />
+
+                      <br />
+
                       <br />
                     </form>
                   </div>
@@ -65,4 +66,4 @@ class Password extends Component {
   }
 }
 
-export default Password;
+export default ValidateCode;

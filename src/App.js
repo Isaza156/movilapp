@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Layout from "./components/Layout";
-import Splash from "./components/Splash";
-import Login from "./components/Login";
-import Account from "./components/Account.jsx";
-import Move from "./components/Move";
-import Home from "./components/Home";
-import Password from "./components/ResetPassword";
-import NewPassword from "./components/NewPassword.jsx";
-import ValidateCode from "./components/ValidateCode";
-import Pqrs from "./components/Pqrs";
-import Contact from "./components/Contact";
-import Faqs from "./components/Faqs";
-import Listen from "./components/Listen";
-import Suggestions from "./components/Suggestions";
+import Splash from "./pages/Splash";
+import Login from "./pages/Login";
+import Account from "./pages/Account";
+import Move from "./pages/Move";
+import Home from "./pages/Home";
+import Password from "./pages/ResetPassword";
+import NewPassword from "./pages/NewPassword";
+import ValidateCode from "./pages/ValidateCode";
+import Pqrs from "./pages/Pqrs";
+import Contact from "./pages/Contact";
+import Faqs from "./pages/Faqs";
+import Listen from "./pages/Listen";
+import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 
 const App = () => {

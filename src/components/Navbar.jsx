@@ -6,9 +6,7 @@ class Navbar extends React.Component {
       <React.Fragment>
         <nav className="navbar navbar-dark bg-white fixed-top border-bottom">
           <a className="navbar-brand" href="/">
-          <h2 className="color-orange">
-          MovilApp
-          </h2> 
+            <h2 className="color-orange">MovilApp</h2>
           </a>
           <button
             className="navbar-toggler collapsed bg-orange"

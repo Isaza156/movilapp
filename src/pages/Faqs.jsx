@@ -5,10 +5,10 @@ class Faqs extends React.Component {
     return (
       <React.Fragment>
         <div className="container mt-5 mx-auto">
-            <h2 className="my-5 text-center">Preguntas frecuentes</h2>
+          <h2 className="my-5 text-center">Preguntas frecuentes</h2>
           <div className="accordion" id="accordionExample">
             <div className="card">
-            <div className="card-header bg-orange" id="headingOne">
+              <div className="card-header bg-orange" id="headingOne">
                 <h2 className="mb-0">
                   <button
                     className="btn btn-link collapsed text-white font-weight-bold"
@@ -30,12 +30,17 @@ class Faqs extends React.Component {
                 data-parent="#accordionExample"
               >
                 <div className="card-body">
-                  Somos una App hecha para escuchar quejas y sugerencias sobre la movilidad en la ciudad, esto con el fin de llevar estas quejas o sugerencias a las entidades encargadas de estos problemas, así de algún modo haremos que mejoren la calidad de su servicio, por ejemplo el metro, los taxis, medios de transporte habituales.
+                  Somos una App hecha para escuchar quejas y sugerencias sobre
+                  la movilidad en la ciudad, esto con el fin de llevar estas
+                  quejas o sugerencias a las entidades encargadas de estos
+                  problemas, así de algún modo haremos que mejoren la calidad de
+                  su servicio, por ejemplo el metro, los taxis, medios de
+                  transporte habituales.
                 </div>
               </div>
             </div>
             <div className="card">
-            <div className="card-header bg-orange" id="headingTwo">
+              <div className="card-header bg-orange" id="headingTwo">
                 <h2 className="mb-0">
                   <button
                     className="btn btn-link collapsed text-white font-weight-bold"
@@ -56,7 +61,11 @@ class Faqs extends React.Component {
                 data-parent="#accordionExample"
               >
                 <div className="card-body">
-                  Dirigete al inicio de nuesta aplicación, allí encontraras el apartado de Quejas y Sugerencias, presionas el botón +, seleccionas quien quiere que te escuche, escribes tu queja o sugerencia y le das enviar. También podrás ver los comentarios de otros usuarios, apoyarlos con un like o comentarlos.
+                  Dirigete al inicio de nuesta aplicación, allí encontraras el
+                  apartado de Quejas y Sugerencias, presionas el botón +,
+                  seleccionas quien quiere que te escuche, escribes tu queja o
+                  sugerencia y le das enviar. También podrás ver los comentarios
+                  de otros usuarios, apoyarlos con un like o comentarlos.
                 </div>
               </div>
             </div>
@@ -82,7 +91,12 @@ class Faqs extends React.Component {
                 data-parent="#accordionExample"
               >
                 <div className="card-body">
-                  Cuando dispones a realizar una queja o sugerencia, te preguntaremos a quien va dirigida, entre estas opciones tenemos: Metro, Taxis, Policia, Tránsito, Alcaldía, Gobernación, Ciclo rutas, Alimentadores, Metroplus. Nosotros nos encargaremos de llevar tu comentario a estas entidades con el fin de mejorar el servicio.
+                  Cuando dispones a realizar una queja o sugerencia, te
+                  preguntaremos a quien va dirigida, entre estas opciones
+                  tenemos: Metro, Taxis, Policia, Tránsito, Alcaldía,
+                  Gobernación, Ciclo rutas, Alimentadores, Metroplus. Nosotros
+                  nos encargaremos de llevar tu comentario a estas entidades con
+                  el fin de mejorar el servicio.
                 </div>
               </div>
             </div>
@@ -108,7 +122,10 @@ class Faqs extends React.Component {
                 data-parent="#accordionExample"
               >
                 <div className="card-body">
-                  Si. todos nuestros usuarios tienen un "Alias", así tus quejas o sugerencias serán totalmente anonimas, no queremos exponerte, nuestro único objetivo es mejorar la movilidad en nuestra ciudad.
+                  Si. todos nuestros usuarios tienen un "Alias", así tus quejas
+                  o sugerencias serán totalmente anonimas, no queremos
+                  exponerte, nuestro único objetivo es mejorar la movilidad en
+                  nuestra ciudad.
                 </div>
               </div>
             </div>

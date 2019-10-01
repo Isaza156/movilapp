@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./styles/reset.css";
 import { Link } from "react-router-dom";
+import "../components/styles/reset.css";
 
 class NewPassword extends Component {
   render() {
@@ -18,7 +18,6 @@ class NewPassword extends Component {
                     <h2>Ingresar nueva contraseña</h2>
 
                     <form className="mt-5 ml-5 mr-5 pb-3 ">
-                      
                       <input
                         type="password"
                         id="inputPassword"
@@ -33,19 +32,15 @@ class NewPassword extends Component {
                         placeholder="Confirmar contraseña* "
                         required
                       />
-                     
 
                       <br />
                       <Link to="/login">
-                        <button
-                          className="btn btn-login btn-lg text-login mt-4 mb-3"
-                         
-                        >
+                        <button className="btn btn-login btn-lg text-login mt-4 mb-3">
                           Restablecer contraseña
                         </button>
                       </Link>
                       <br />
-                      
+
                       <br />
 
                       <br />
@@ -62,4 +57,4 @@ class NewPassword extends Component {
   }
 }
 
-export default NewPassword ;
+export default NewPassword;

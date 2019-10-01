@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./images/logo.png";
-import "./styles/splash.css";
+import Logo from "../components/images/logo.png";
+import "../components/styles/splash.css";
 
 class Splash extends React.Component {
   render() {

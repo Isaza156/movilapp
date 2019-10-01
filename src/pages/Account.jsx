@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles/account.css";
+import "../components/styles/account.css";
 import { Link } from "react-router-dom";
 
 class Form extends Component {
@@ -60,7 +60,10 @@ class Form extends Component {
                         required
                       />
                       <span className="link-form text-login mx-1 ">
-                      <small> He leído y acepto los terminos y condiciones </small> 
+                        <small>
+                          {" "}
+                          He leído y acepto los terminos y condiciones{" "}
+                        </small>
                       </span>
 
                       <br />

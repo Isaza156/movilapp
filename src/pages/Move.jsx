@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './styles/move.css';
+import "../components/styles/move.css";
 
 class Move extends React.Component {
   render() {
@@ -203,10 +203,11 @@ class Move extends React.Component {
             </div>
           </div>
           <div className="container text-center">
-          <Link to="/home">
-          <button type="button" className="btn btn-lg mb-5 btn-login">Iniciar</button>
-          </Link>
-       
+            <Link to="/home">
+              <button type="button" className="btn btn-lg mb-5 btn-login">
+                Iniciar
+              </button>
+            </Link>
           </div>
         </div>
       </React.Fragment>
