@@ -34,3 +34,37 @@ code {
 .z-index{
   z-index: 2;
 }
+
+.bg-orange{
+  background-color: #f28500;
+}
+
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+.custom-control-label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #adb5bd solid 1px;
+}
+
+.custom-control-label::after {
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background: no-repeat 50% / 50% 50%;
+}

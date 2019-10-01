@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './styles/move.css';
 
-class Move extends React.Component {
+
+class Listen extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container mt-5">
-          <h2 className="mb-5 text-center">¿Cómo me movilizo?</h2>
+        <div className="container mt-5 pt-5">
+          <h2 className="mb-5 text-center">¿Quién quieres que te escuche?</h2>
           <div className="container row ml-2">
             <div className="col-6">
               <div className="custom-control custom-checkbox mr-sm-2 mb-3">
@@ -205,8 +205,7 @@ class Move extends React.Component {
           <div className="container text-center">
           <Link to="/home">
           <button type="button" className="btn btn-lg mb-5 btn-login">Iniciar</button>
-          </Link>
-       
+          </Link>       
           </div>
         </div>
       </React.Fragment>
@@ -214,4 +213,4 @@ class Move extends React.Component {
   }
 }
 
-export default Move;
+export default Listen;
