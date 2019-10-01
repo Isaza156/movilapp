@@ -6,7 +6,11 @@ class Contact extends React.Component {
       <React.Fragment>
         <div className="container mt-5">
           <h2 className="mb-4">Contact</h2>
-          <p>En este apartado podrás realizar tus preguntas en relación a la aplicación, o si encuentras un error por favor avisarnos, responderemos lo antes posible.</p>
+          <p>
+            En este apartado podrás realizar tus preguntas en relación a la
+            aplicación, o si encuentras un error por favor avisarnos,
+            responderemos lo antes posible.
+          </p>
           <form>
             <div className="form-group">
               <input
@@ -26,7 +30,7 @@ class Contact extends React.Component {
               <textarea
                 className="form-control"
                 rows="4"
-                placeholder="Escribe aquí tus preguntas"
+                placeholder="Escribe aquí tus inquietudes"
               ></textarea>
             </div>
             <button className="btn bg-orange btn-lg text-white">Enviar</button>
