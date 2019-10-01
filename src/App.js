@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import Listen from "./pages/Listen";
 import Suggestions from "./pages/Suggestions";
+import CreatePost from "./pages/CreatePost";
 import NotFound from "./pages/NotFound";
 
 class App extends React.Component {
@@ -41,6 +42,7 @@ class App extends React.Component {
             <Route exact path="/listen" component={Listen} />
             <Route exact path="/suggestions" component={Suggestions} />
             <Route exact path="/pqrs" component={Pqrs} />
+            <Route exact path="/post" component={CreatePost} />
             <Route component={NotFound} />
           </Layout>
         </Switch>
