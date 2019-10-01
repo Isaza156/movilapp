@@ -118,25 +118,24 @@ class CreatePost extends Component {
               rows="3"
               placeholder="Agregar comentario"
             ></textarea>
-            
           </div>
           <div className="d-flex justify-content-end">
-              <Link to={"/"}>
-                <button
-                  className="btn btn-outline-secondary  mt-4 mb-3 mr-1"
-                  type="submit"
-                >
-                  Cancelar
-                </button>
-              </Link>
-
+            <Link to={"/"}>
               <button
-                className="btn btn-login  text-login mt-4 mb-3 pl-4 pr-4"
+                className="btn btn-outline-secondary  mt-4 mb-3 mr-1"
                 type="submit"
               >
-                Enviar
+                Cancelar
               </button>
-            </div>
+            </Link>
+
+            <button
+              className="btn btn-login  text-login mt-4 mb-3 pl-4 pr-4"
+              type="submit"
+            >
+              Enviar
+            </button>
+          </div>
         </div>
       </React.Fragment>
     );
