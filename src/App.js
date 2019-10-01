@@ -16,6 +16,7 @@ import Faqs from "./pages/Faqs";
 import Listen from "./pages/Listen";
 import Suggestions from "./pages/Suggestions";
 import CreatePost from "./pages/CreatePost";
+import PqrsTwo from "./pages/PqrsTwo";
 import NotFound from "./pages/NotFound";
 
 class App extends React.Component {
@@ -27,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-          <Switch>
+        <Switch>
           <Route exact path="/" component={Splash} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/account" component={Account} />
@@ -37,6 +38,7 @@ class App extends React.Component {
           <Route exact path="/validatecode" component={ValidateCode} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/faqs" component={Faqs} />
+          <Route exact path="/pqrstwo" component={PqrsTwo} />
           <Layout>
             <Route exact path="/home" component={Home} />
             <Route exact path="/listen" component={Listen} />
