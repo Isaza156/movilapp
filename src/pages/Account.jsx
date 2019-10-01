@@ -1,12 +1,18 @@
 import React, { Component } from "react";
+import WOW from "wowjs";
 import "../components/styles/account.css";
 import { Link } from "react-router-dom";
 
 class Form extends Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     return (
       <React.Fragment>
-        <div className="bg-login">
+        <div className="bg-login wow fadeIn">
           <div className="container ">
             <div className="brand">
               <div className="row">

@@ -7,7 +7,7 @@ class Splash extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container text-center center">
+        <div className="container text-center center wow fadeIn" data-wow-duration="5s">
           <div className="mb-5">
             <h1>MovilApp</h1>
           </div>
@@ -26,7 +26,7 @@ class Splash extends React.Component {
             <h4>Por una mejor movilidad</h4>
           </div>
         </div>
-        <div className="footer text-center text-secondary">
+        <div className="footer text-center text-secondary wow fadeIn" data-wow-duration="5s">
           <h6>
             <small>MovilApp 2019. Todos los derechos reservados.</small>
           </h6>

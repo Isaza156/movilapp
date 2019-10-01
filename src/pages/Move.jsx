@@ -1,12 +1,18 @@
 import React from "react";
+import WOW from "wowjs";
 import { Link } from "react-router-dom";
 import "../components/styles/move.css";
 
 class Move extends React.Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     return (
       <React.Fragment>
-        <div className="container mt-5">
+        <div className="container mt-5 wow fadeIn">
           <h2 className="mb-5 text-center">¿Cómo me movilizo?</h2>
           <div className="container row ml-2">
             <div className="col-6">

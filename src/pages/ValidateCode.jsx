@@ -1,13 +1,19 @@
 import React, { Component } from "react";
+import WOW from "wowjs";
 import "../components/styles/reset.css";
 import { Link } from "react-router-dom";
 
 class ValidateCode extends Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     return (
       <React.Fragment>
         <div className="bg-login">
-          <div className="container">
+          <div className="container wow fadeIn">
             <div className="brand">
               <div className="row">
                 <div className="col-lg-8 col-sm-12 col-xs-12 ">

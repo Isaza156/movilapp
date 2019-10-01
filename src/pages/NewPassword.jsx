@@ -1,13 +1,19 @@
 import React, { Component } from "react";
+import WOW from "wowjs";
 import { Link } from "react-router-dom";
 import "../components/styles/reset.css";
 
 class NewPassword extends Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     return (
       <React.Fragment>
         <div className="bg-login">
-          <div className="container ">
+          <div className="container wow fadeIn">
             <div className="brand">
               <div className="row">
                 <div className="col-lg-2 d-none d-lg-block "></div>

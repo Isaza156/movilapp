@@ -6,10 +6,9 @@ class Navbar extends React.Component {
       <React.Fragment>
         <nav className="navbar navbar-dark bg-white fixed-top border-bottom">
           <a className="navbar-brand" href="/">
-            <h2 className="color-orange">MovilApp</h2>
           </a>
           <button
-            className="navbar-toggler collapsed bg-orange"
+            className="navbar-toggler collapsed bg-oranges"
             type="button"
             data-toggle="collapse"
             data-target="#collapse"
@@ -17,7 +16,7 @@ class Navbar extends React.Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon oranges"></span>
           </button>
 
           <div className="navbar-collapse collapse" id="collapse">
