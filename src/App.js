@@ -8,6 +8,7 @@ import Account from './components/Account'
 import Password from './components/resetPassword'
 import NewPassword from './components/newPassword'
 import ValidateCode from './components/validateCode'
+import CreatePost from './components/createPost'
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route exact path="/resetpassword" component={Password} />
           <Route exact path="/newpassword" component={NewPassword} />
           <Route exact path="/validatecode" component={ValidateCode} />
+          <Route exact path="/createpost" component={CreatePost} />
           <Route component={NotFound} />
           
         </Switch>
