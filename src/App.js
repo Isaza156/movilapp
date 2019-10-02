@@ -1,15 +1,19 @@
 import React from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import WOW from "wowjs";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Layout from "./components/Layout";
+
+import PrivateRoute from './routes/Private.route'
+
 import Splash from "./pages/Splash";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
+
 import Move from "./pages/Move";
-import Home from "./pages/Home";
 import Password from "./pages/ResetPassword";
 import NewPassword from "./pages/NewPassword";
 import ValidateCode from "./pages/ValidateCode";
+
+import Home from "./pages/Home";
 import Pqrs from "./pages/Pqrs";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
@@ -19,9 +23,7 @@ import CreatePost from "./pages/CreatePost";
 import PqrsTwo from "./pages/PqrsTwo";
 import NotFound from "./pages/NotFound";
 import Comments from "./components/Comments";
-import Contact from "./components/Contact";
-import Suggestions from "./components/Suggestions";
-import Faqs from "./components/Faqs";
+
 
 class App extends React.Component {
   componentDidMount() {
@@ -33,25 +35,35 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
+
           <Route exact path="/" component={Splash} />
+
           <Route exact path="/login" component={Login} />
           <Route exact path="/account" component={Account} />
-          <Route exact path="/move" component={Move} />
+
           <Route exact path="/resetpassword" component={Password} />
           <Route exact path="/newpassword" component={NewPassword} />
           <Route exact path="/validatecode" component={ValidateCode} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/faqs" component={Faqs} />
-          <Route exact path="/pqrstwo" component={PqrsTwo} />
-          <Route exact path="/createpost" component={CreatePost} />
-          <Layout>
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/listen" component={Listen} />
-            <Route exact path="/suggestions" component={Suggestions} />
-            <Route exact path="/pqrs" component={Pqrs} />
-            <Route exact path="/post" component={CreatePost} />
-            <Route component={NotFound} />
-          </Layout>
+
+          <PrivateRoute exact path="/move" component={Move} />
+
+          <PrivateRoute exact path="/contact" component={Contact} />
+          <PrivateRoute exact path="/faqs" component={Faqs} />
+          <PrivateRoute exact path="/pqrstwo" component={PqrsTwo} />
+          <PrivateRoute exact path="/createpost" component={CreatePost} />
+
+          <PrivateRoute exact path="/home" component={Home} />
+          <PrivateRoute exact path="/listen" component={Listen} />
+          <PrivateRoute exact path="/suggestions" component={Suggestions} />
+          <PrivateRoute exact path="/pqrs" component={Pqrs} />
+          <PrivateRoute exact path="/post" component={CreatePost} />
+
+          <Route exact path="/notfound" component={NotFound} />
+
+          <Route>
+            <Redirect to="/notfound" />
+          </Route>
+
         </Switch>
       </BrowserRouter>
     );
