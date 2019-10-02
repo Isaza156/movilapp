@@ -5,7 +5,7 @@ class CallToAction extends React.Component {
     return (
       <React.Fragment>
         <div className="container-fluid text-center">
-          <i class="fas fa-plus-circle fa-3x color-orange "></i>
+          <i className="fas fa-plus-circle fa-3x color-orange "></i>
           <p>Agregar</p>
         </div>
       </React.Fragment>

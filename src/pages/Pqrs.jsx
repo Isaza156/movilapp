@@ -1,6 +1,5 @@
 import React from "react";
 import CallToAction from "../components/CallToAction";
-
 class Pqrs extends React.Component {
   render() {
     return (
