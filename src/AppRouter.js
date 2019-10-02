@@ -50,12 +50,12 @@ class App extends React.Component {
           <PrivateRoute exact path="/contact" component={Contact} />
           <PrivateRoute exact path="/faqs" component={Faqs} />
           <PrivateRoute exact path="/pqrstwo" component={PqrsTwo} />
+          <PrivateRoute exact path="/pqrs" component={Pqrs} />
           <PrivateRoute exact path="/createpost" component={CreatePost} />
 
           <PrivateRoute exact path="/home" component={Home} />
           <PrivateRoute exact path="/listen" component={Listen} />
           <PrivateRoute exact path="/suggestions" component={Suggestions} />
-          <PrivateRoute exact path="/pqrs" component={Pqrs} />
           <PrivateRoute exact path="/post" component={CreatePost} />
 
           <Route exact path="/notfound" component={NotFound} />
