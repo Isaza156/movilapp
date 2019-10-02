@@ -9,9 +9,8 @@ class Splash extends React.Component {
       <React.Fragment>
         <div className="splash_container  text-center  wow fadeIn" data-wow-duration="3s">
           <div className="mb-5">
-            <h1>MovilApp</h1>
-          </div>
-          <div className="mb-5">
+            <h1 className="mb-5">MovilApp</h1>
+
             <Link to="/login">
               <img
                 src={Logo}
