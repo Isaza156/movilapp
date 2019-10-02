@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Styled from 'styled-components'
 
 const Flex_container = Styled.div`
-  width:100%
+  width:100%;
   display:flex;
   align-content:center;
   align-items:center;
