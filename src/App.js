@@ -21,6 +21,7 @@ import NotFound from "./pages/NotFound";
 import Comments from "./components/Comments";
 import Contact from "./components/Contact";
 import Suggestions from "./components/Suggestions";
+import Faqs from "./components/Faqs";
 
 class App extends React.Component {
   componentDidMount() {
