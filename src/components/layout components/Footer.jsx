@@ -1,39 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-class Footer extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <footer className="footer bg-white border-top">
-          <div className="container text-center ">
-            <div className="row">
-              <div className="col-4 col-md-4 pt-3 mb-2">
-                <Link to="/" className="text-dark">
-                  <i className="fas fa-road color-orange"></i>
+import Styled from 'styled-components'
 
-                  <br /> Trayectos
-                </Link>
-              </div>
-              <div className="col-4 col-md-4 pt-3 mb-2">
-                <Link to="/home" className="text-dark">
-                  <i className="fas fa-home color-orange"></i>
+const Flex_container = Styled.div`
+  width:100%
+  display:flex;
+  align-content:center;
+  align-items:center;
+  justify-content:space-around;
+`
 
-                  <br /> Inicio
-                </Link>
-              </div>
-              <div className="col-4 col-md-4 pt-3 mb-2">
-                <Link to="/pqrstwo" className="text-dark">
-                  <i className="fas fa-paper-plane color-orange"></i>
+const Footer = () => (
+  <footer className="footer bg-white border-top text-center">
+    <Flex_container>
 
-                  <br /> Pqrs
-                </Link>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </React.Fragment>
-    );
-  }
-}
+      <Link to="/trayectos" className="text-dark footer_item_container">
+        <i className="fas fa-road color-orange"></i>
+        <br /> Trayectos
+      </Link>
+
+      <Link to="/home" className="text-dark footer_item_container">
+        <i className="fas fa-home color-orange"></i>
+        <br /> Inicio
+      </Link>
+
+      <Link to="/pqrstwo" className="text-dark footer_item_container">
+        <i className="fas fa-paper-plane color-orange"></i>
+        <br /> Pqrs
+      </Link>
+
+    </Flex_container>
+  </footer>
+)
 
 export default Footer;
