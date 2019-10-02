@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import logo from "../components/images/logo.png";
 import "../components/styles/login.css";
 
+import userAuth from '../services/userAuth.service'
+
 class Form extends Component {
   componentDidMount() {
     new WOW.WOW({
@@ -39,10 +41,9 @@ class Form extends Component {
                       />
                       <br />
                       <Link to="/home" style={{ textDecoration: "none" }}>
-                        <button
+                        <button onClick={userAuth.setAuth()}
                           className="btn btn-login btn-lg  btn-block text-login rounded-pill"
-                          type="submit"
-                        >
+                          type="submit">
                           Ingresar
                         </button>
                       </Link>
