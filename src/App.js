@@ -43,6 +43,7 @@ class App extends React.Component {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/faqs" component={Faqs} />
           <Route exact path="/pqrstwo" component={PqrsTwo} />
+          <Route exact path="/createpost" component={CreatePost} />
           <Layout>
             <Route exact path="/home" component={Home} />
             <Route exact path="/listen" component={Listen} />
