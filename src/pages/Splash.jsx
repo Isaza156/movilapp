@@ -27,11 +27,9 @@ class Splash extends React.Component {
         </div>
 
         <div className="mb-5 footer text-center text-secondary wow fadeIn" data-wow-duration="5s">
-
           <small>Todos los derechos reservados
               <br /> MovilApp 2019
             </small>
-
         </div>
       </React.Fragment>
     );
