@@ -19,6 +19,7 @@ import CreatePost from "./pages/CreatePost";
 import PqrsTwo from "./pages/PqrsTwo";
 import NotFound from "./pages/NotFound";
 import Comments from "./components/Comments";
+import Contact from "./components/Contact";
 
 class App extends React.Component {
   componentDidMount() {
