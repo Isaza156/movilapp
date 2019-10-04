@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Comments from './Comments'
 
 export class Card extends Component {
   constructor(props) {
@@ -8,21 +9,42 @@ export class Card extends Component {
       categorias: this.props.data.categorias,
       entidades: this.props.data.entidades,
       likes: this.props.data.likes,
-      ubicacion: this.props.data.ubicacion     
+      ubicacion: this.props.data.ubicacion,
+      postid: "postid666"
+      // postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API
     };
   }
+
+
+  componentDidMount() {
+    this.traerComentarios();
+  }
+
+
+  async traerComentarios() {
+    try {
+      let data = await fetch(`https://aka-geek.appspot.com/api/comentarios/varios/${this.state.postid}`);
+      data = await data.json();
+
+
+      this.setState({ ...this.state, comments: data });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   render() {
     return (
       <>
-        <div className="card mb-3">
+        <div className="card mb-3 animated slideInRight">
           <div className="card-body">
             <div className="d-flex justify-content-between">
               <small className="form-text text-muted ">
                 {!this.state.entidades
                   ? "loading..."
                   : this.state.entidades.map(
-                      entidad => `${entidad.toUpperCase()}/`
-                    )}
+                    entidad => `${entidad.toUpperCase()}/`
+                  )}
               </small>
               <small className="form-text text-muted">1 min</small>
             </div>
@@ -31,7 +53,7 @@ export class Card extends Component {
             </h5>
             <p className="card-text">
               {!this.state.texto ? "loading..." : this.state.texto}
-              <br/>
+              <br />
               <span className="text-info">
                 {!this.state.categorias
                   ? "loading..."
@@ -49,6 +71,15 @@ export class Card extends Component {
                 </a>
               </div>
             </div>
+            <hr />
+            <div className="comments_container">
+              {!this.state.comments ?
+                "loading comments..."
+                :
+                this.state.comments.map((entry, i) => <Comments data={entry} key={i} />)
+              }
+            </div>
+
           </div>
         </div>
       </>

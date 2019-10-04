@@ -24,7 +24,7 @@ const Footer = () => (
         <br /> Inicio
       </Link>
 
-      <Link to="/pqrstwo" className="text-dark footer_item_container">
+      <Link to="/sugerencias" className="text-dark footer_item_container">
         <i className="fas fa-paper-plane color-orange"></i>
         <br /> Pqrs
       </Link>

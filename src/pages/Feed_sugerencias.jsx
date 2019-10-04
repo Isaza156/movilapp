@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import Card from "../components/CardPqrs";
 import CallToAction from "../components/CallToAction";
 
-class PqrsTwo extends React.Component {
+export default class FeedSugerencias extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -12,7 +13,8 @@ class PqrsTwo extends React.Component {
     try {
       let data = await fetch("https://aka-geek.appspot.com/api/publicaciones/");
       data = await data.json();
-      // const data = ["data"]
+
+      data = data.filter(post => post.esQueja === false)
       console.log(data);
 
       this.setState({ data });
@@ -29,10 +31,10 @@ class PqrsTwo extends React.Component {
     return (
       <React.Fragment>
         <div className="container-fluid text-right pt-5 mt-5">
-          <a href="/" className="align-top mx-3 text-dark">
-            Sugerencias
-          </a>
+          <Link to='/quejas' className="align-top mx-3 text-dark">
+            Ir a quejas
           <li className="fas fa-chevron-right fa-2x color-orange"></li>
+          </Link>
         </div>
         <div className="container mb-5">
           {!this.state.data
@@ -87,4 +89,4 @@ class PqrsTwo extends React.Component {
     );
   }
 }
-export default PqrsTwo;
+

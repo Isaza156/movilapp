@@ -20,7 +20,10 @@ import Faqs from "./pages/Faqs";
 import Listen from "./pages/Listen";
 import Suggestions from "./pages/Suggestions";
 import CreatePost from "./pages/CreatePost";
-import PqrsTwo from "./pages/PqrsTwo";
+
+import FeedSugerencias from "./pages/Feed_sugerencias";
+import FeedQuejas from "./pages/Feed_quejas";
+
 import NotFound from "./pages/NotFound";
 import Comments from "./components/Comments";
 
@@ -49,7 +52,10 @@ class App extends React.Component {
 
           <PrivateRoute exact path="/contact" component={Contact} />
           <PrivateRoute exact path="/faqs" component={Faqs} />
-          <PrivateRoute exact path="/pqrstwo" component={PqrsTwo} />
+
+          <PrivateRoute exact path="/sugerencias" component={FeedSugerencias} />
+          <PrivateRoute exact path="/quejas" component={FeedQuejas} />
+
           <PrivateRoute exact path="/pqrs" component={Pqrs} />
           <PrivateRoute exact path="/createpost" component={CreatePost} />
 
