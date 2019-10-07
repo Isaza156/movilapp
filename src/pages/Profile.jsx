@@ -1,19 +1,21 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import Card from "../components/CardPqrs";
-import CallToAction from "../components/CallToAction";
+
+import userAuth from "../services/userAuth.service";
 
 export default class FeedSugerencias extends React.Component {
-  constructor(props) {
+constructor(props) {
     super(props);
     this.state = {
-      esQueja: false,
+      uid: userAuth.getId(),
+      esQueja: false
     };
-  }
+}
 
   async traerTodo() {
     try {
-      let data = await fetch("https://aka-geek.appspot.com/api/publicaciones/");
+      let data = await fetch(`https://aka-geek.appspot.com/api/publicaciones/getByUserId/${this.state.uid}`);
       data = await data.json();
 
       data = data.filter(post => post.esQueja === false)
@@ -32,11 +34,7 @@ export default class FeedSugerencias extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-fluid text-right pt-5 mt-5">
-          <Link to='/quejas' className="align-top mx-3 text-dark">
-            Ir a quejas
-          <li className="fas fa-chevron-right fa-2x color-orange"></li>
-          </Link>
+        <div className="container-fluid text-right pt-5 mt-5">   
         </div>
         <div className="container mb-5">
           {!this.state.data
@@ -86,7 +84,7 @@ export default class FeedSugerencias extends React.Component {
             </div>
           </div> */}
         </div>
-        <CallToAction laQueja = {this.state.esQueja}/>
+       
       </React.Fragment>
     );
   }

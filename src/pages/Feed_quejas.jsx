@@ -7,7 +7,9 @@ import CallToAction from "../components/CallToAction";
 export default class FeedQuejas extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      esQueja : true,
+    };
   }
 
   async traerTodo() {
@@ -27,6 +29,7 @@ export default class FeedQuejas extends React.Component {
   componentDidMount() {
     this.traerTodo();
   }
+  
 
   render() {
     return (
@@ -85,7 +88,8 @@ export default class FeedQuejas extends React.Component {
             </div>
           </div> */}
         </div>
-        <CallToAction />
+
+        <CallToAction laQueja = {this.state.esQueja}/>
       </React.Fragment>
     );
   }

@@ -6,18 +6,28 @@ class CallToAction extends React.Component {
     super(props);
     this.state = {
       values: {
-        titulo: "",
-        texto: "",
+        titulo: "la buena santi",
+        texto: "suscribtete a juan zuleta para ser millonario en un dia",
         uid: userAuth.getId(),
-        esQueja: false,
+        esQueja: this.props.laQueja,
         categorias : [],
         entidades : []
       }
     };
+    console.log('La quejaaaaa del state '+this.state.values.esQueja);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
+
+  // componentDidMount(){
+  //   const queja = this.props.laQueja;
+  //   this.setState({
+  //     esQueja:this.props.laQueja,
+  //   })
+  //   console.log('La quejaaaaa de los props ----> '+queja);
+  //   console.log('La quejaaaaa del state '+this.state.esQueja);
+  // }
 
   handleChange = e => {
     this.setState({
@@ -32,6 +42,8 @@ class CallToAction extends React.Component {
     e.preventDefault();
    // console.log("Insertado " + JSON.stringify(this.state.values));
     this.traerTodo()
+    document.querySelector('.close').click()
+
   }
 
   async traerTodo() {

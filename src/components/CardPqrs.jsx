@@ -10,6 +10,7 @@ export class Card extends Component {
       entidades: this.props.data.entidades,
       likes: this.props.data.likes,
       ubicacion: this.props.data.ubicacion,
+      titulo: this.props.data.titulo,
       postid: "postid666"
       // postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API
     };
@@ -49,7 +50,7 @@ export class Card extends Component {
               <small className="form-text text-muted">1 min</small>
             </div>
             <h5 className="card-title">
-              {!this.state.ubicacion ? "loading..." : this.state.ubicacion}
+              {!this.state.titulo ? "loading..." : this.state.titulo}
             </h5>
             <p className="card-text">
               {!this.state.texto ? "loading..." : this.state.texto}
