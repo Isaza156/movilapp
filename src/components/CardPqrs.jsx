@@ -23,7 +23,7 @@ export class Card extends Component {
 
   async traerComentarios() {
     try {
-      let data = await fetch(`https://aka-geek.appspot.com/api/comentarios/varios/${this.state.postid}`);
+      let data = await fetch(`https://aka-geek.appspot.com/api/comentarios/getbypostid/${this.state.postid}`);
       data = await data.json();
 
 
