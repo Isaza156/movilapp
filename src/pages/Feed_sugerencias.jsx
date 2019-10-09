@@ -33,9 +33,9 @@ export default class FeedSugerencias extends React.Component {
     return (
       <React.Fragment>
         <div className="container-fluid text-right pt-5 mt-5">
-          <Link to='/quejas' className="align-top mx-3 text-dark">
+          <Link to='/quejas' className="align-top text-dark">
             Ir a quejas
-          <li className="fas fa-chevron-right fa-2x color-orange"></li>
+          <li className="fas fa-chevron-right fa-2x color-orange align-middle"></li>
           </Link>
         </div>
         <div className="container mb-5">

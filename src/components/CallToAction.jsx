@@ -77,17 +77,17 @@ console.log(this.state.values)
     return (
       <React.Fragment>
         <form onSubmit={this.handleSubmit}>
-          <div className="container-fluid text-center">
-            <i className="fas fa-plus-circle fa-3x color-orange "></i>
-            <button
-              type="button"
-              className="btn btn-primary fas fa-plus-circle fa-3x color-orange sticky mb-5"
+          <div className="container-fluid ">
+            <div className="mb-5 pb-2 bg-white mt-5">
+            <a hre="/"
+              className="float color-orange bg-orange mb-5"
               data-toggle="modal"
               data-target="#exampleModal"
               data-whatever="@mdo"
             >
-              Open modal for @mdo
-            </button>
+              <i className="fa fa-plus my-float text-white "></i><br/>              
+            </a>
+            </div>
 
             <div
               className="modal fade"
@@ -101,7 +101,7 @@ console.log(this.state.values)
                 <div className="modal-content">
                   <div className="modal-header">
                     <h5 className="modal-title" id="exampleModalLabel">
-                      New message
+                      Crear publicación
                     </h5>
                     <button
                       type="button"
@@ -118,7 +118,7 @@ console.log(this.state.values)
                           htmlFor="recipient-name"
                           className="col-form-label"
                         >
-                          Titulo:
+                          Título:
                         </label>
                         <input
                           onChange={this.handleChange}
@@ -134,7 +134,7 @@ console.log(this.state.values)
                           htmlFor="message-text"
                           className="col-form-label"
                         >
-                          Comentario:
+                          Publicación:
                         </label>
                         <textarea
                           onChange={this.handleChange}
@@ -148,14 +148,14 @@ console.log(this.state.values)
                   <div className="modal-footer">
                     <button
                       type="button"
-                      className="btn btn-secondary"
+                      className="btn btn-outline-secondary"
                       data-dismiss="modal"
                     >
                       Close
                     </button>
                     <button
                       type="submit"
-                      className="btn btn-success"
+                      className="btn btn-login"
                       onClick={this.handleClick}
                     >
                       Enviar
