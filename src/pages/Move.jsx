@@ -1,6 +1,6 @@
 import React from "react";
 import WOW from "wowjs";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import "../components/styles/move.css";
 
   
@@ -135,7 +135,7 @@ class Move extends React.Component {
                   Taxi
                 </label>
               </div>
-              {/* <div className="custom-control custom-checkbox mr-sm-2 mb-3">
+              <div className="custom-control custom-checkbox mr-sm-2 mb-3">
                 <input
                   type="checkbox"
                   className="custom-control-input"
@@ -151,7 +151,7 @@ class Move extends React.Component {
                 >
                   Plataformas
                 </label>
-              </div>*/}
+              </div>
             </div> 
             <div className="col-6">
               <div className="custom-control custom-checkbox mr-sm-2 mb-3">
