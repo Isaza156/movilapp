@@ -7,13 +7,13 @@ class Move extends React.Component {
   componentDidMount() {
     new WOW.WOW({
       live: false
-    }).init();
+    }).init(); //Hay que hacer cambios
   }
   render() {
     return (
       <React.Fragment>
         <div className="container mt-5 wow fadeIn">
-          <h2 className="mb-5 text-center">¿Cómo me movilizo?</h2>
+          <h2 className="mb-5 text-center">¿Cómo me movilizo?</h2> 
           <div className="container row ml-2">
             <div className="col-6">
               <div className="custom-control custom-checkbox mr-sm-2 mb-3">
