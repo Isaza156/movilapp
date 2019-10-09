@@ -23,7 +23,7 @@ class Home extends React.Component {
                 <p className="lead font-weight-normal"></p>
                 <a
                   className="btn bg-orange text-white shadow font-weight-bold mt-4"
-                  href="https://wa.me/"
+                  href="/sugerencias"
                 >
                   Tengo una idea
                 </a>
