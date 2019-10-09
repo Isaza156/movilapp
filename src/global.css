@@ -1,9 +1,3 @@
-html{
-  height: 100vh;
-  width: 100vw;
-
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -72,4 +66,20 @@ body {
   height: 1rem;
   content: "";
   background: no-repeat 50% / 50% 50%;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
 }

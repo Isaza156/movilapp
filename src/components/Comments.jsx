@@ -15,7 +15,7 @@ class Comments extends React.Component {
     const { userName, text } = this.state
     return (
       <React.Fragment>
-        <div className="container mx-auto text-left mt-2 animated slideInRight w-100">
+        <div className="container mx-auto text-left mt-2 w-100">
           <div className="card">
             <div className="card-body">
               <h5>

@@ -36,7 +36,7 @@ export class Card extends Component {
   render() {
     return (
       <>
-        <div className="card mb-3 animated slideInRight">
+        <div className="card mx-0 my-5">
           <div className="card-body">
             <div className="d-flex justify-content-between">
               <small className="form-text text-muted ">
@@ -60,8 +60,7 @@ export class Card extends Component {
                   : this.state.categorias.map(categoria => `#${categoria} `)}
               </span>
             </p>
-
-            <div className="d-flex justify-content-between pt-3">
+            {/* <div className="d-flex justify-content-between pt-3">
               <div>
                 <i className="fas fa-heart text-danger fa-2x"></i>
               </div>
@@ -71,15 +70,16 @@ export class Card extends Component {
                 </a>
               </div>
             </div>
-            <hr />
+            <div className="m-0 p-0">
+            <hr className="bg-warning" />
+            </div>
             <div className="comments_container">
               {!this.state.comments ?
                 "loading comments..."
                 :
                 this.state.comments.map((entry, i) => <Comments data={entry} key={i} />)
               }
-            </div>
-
+            </div> */}
           </div>
         </div>
       </>
