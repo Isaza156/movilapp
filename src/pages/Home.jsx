@@ -2,6 +2,8 @@ import React from "react";
 import WOW from "wowjs";
 import blog from "../components/images/home.jpeg";
 import metro from "../components/images/metro.jpg";
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+
 
 class Home extends React.Component {
   
@@ -136,6 +138,21 @@ class Home extends React.Component {
               <div className="col-12 col-md-6 text-center">
                 <h2 className="text-center mb-5">Nuestro Twitter</h2>
                 <p>Aquí van los twitters de MovilApp</p>
+                <TwitterTimelineEmbed
+  sourceType="profile"
+  screenName="saurabhnemade"
+  options={{height: 400}}
+/>
+<TwitterTweetEmbed
+  tweetId={'933354946111705097'}
+/>
+<TwitterShareButton
+    url={'https://facebook.com/saurabhnemade'}
+    options={{ text: '#reactjs is awesome', via: 'saurabhnemade' }}
+  />
+    <TwitterFollowButton
+    screenName={'saurabhnemade'}
+  />
               </div>
             </div>
           </div>
