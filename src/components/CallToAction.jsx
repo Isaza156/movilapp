@@ -48,9 +48,7 @@ class CallToAction extends React.Component {
   async traerTodo() {
     console.log(this.state.values);
     try {
-      let response = await fetch(
-        "https://aka-geek.appspot.com/api/publicaciones/",
-        {
+      let response = await fetch( "https://aka-geek.appspot.com/api/publicaciones/", {
           method: "POST", // or 'PUT'
           body: JSON.stringify(this.state.values), // data can be `string` or {object}!
           headers: {
