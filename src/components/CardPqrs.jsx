@@ -13,7 +13,7 @@ export class Card extends Component {
       titulo: this.props.data.titulo,
       postid: this.props.data._id,
       time: this.props.data.timestamp
-      // postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API
+      // postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API.
     };
   }
 
@@ -21,6 +21,7 @@ export class Card extends Component {
   componentDidMount() {
     this.traerComentarios();
   }
+
 
 
   async traerComentarios() {
