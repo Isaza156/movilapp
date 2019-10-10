@@ -3,15 +3,28 @@ import WOW from "wowjs";
 import { Link } from "react-router-dom";
 import logo from "../components/images/logo.png";
 import "../components/styles/login.css";
-
-import userAuth from '../services/userAuth.service'
+import userAuth from '../services/userAuth.service';
+import { specialty } from '../assets/utils/mocks/specialtyMocks';
 
 class Form extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      email:'',
+      password: ''
+    }
+
+    this.mocks={
+      specialty,
+    };
+  }
+
   componentDidMount() {
     new WOW.WOW({
       live: false
     }).init();
   }
+
   render() {
     return (
       <React.Fragment>
@@ -30,6 +43,8 @@ class Form extends Component {
                         id="inputEmail"
                         className="form-control input-text  mb-3 text-center input-hover"
                         placeholder="Correo Electrónico"
+                        name='email'
+                        defaultValue={this.state.email}
                         required
                       />
                       <input

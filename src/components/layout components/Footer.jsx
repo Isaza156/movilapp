@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Styled from 'styled-components'
 
-const Flex_container = Styled.div`
+const FlexContainer = Styled.div`
   width:100%;
   display:flex;
   align-content:center;
@@ -12,7 +12,7 @@ const Flex_container = Styled.div`
 
 const Footer = () => (
   <footer className="footer bg-white border-top text-center">
-    <Flex_container>
+    <FlexContainer>
 
       <Link to="/trayectos" className="text-dark footer_item_container">
         <i className="fas fa-road color-orange"></i>
@@ -29,7 +29,7 @@ const Footer = () => (
         <br /> Pqrs
       </Link>
 
-    </Flex_container>
+    </FlexContainer>
   </footer>
 )
 

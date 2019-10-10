@@ -1,20 +1,20 @@
 import React from "react";
-import userAuth from '../services/userAuth.service'
+import userAuth from "../services/userAuth.service";
 
 class CallToAction extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       values: {
-        titulo: "la buena santi",
-        texto: "suscribtete a juan zuleta para ser millonario en un dia",
+        titulo: "",
+        texto: "",
         uid: userAuth.getId(),
         esQueja: this.props.laQueja,
-        categorias : [],
-        entidades : []
+        categorias: [],
+        entidades: []
       }
     };
-    console.log('La quejaaaaa del state '+this.state.values.esQueja);
+    console.log("La quejaaaaa del state " + this.state.values.esQueja);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -40,38 +40,37 @@ class CallToAction extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-   // console.log("Insertado " + JSON.stringify(this.state.values));
-    this.traerTodo()
-    document.querySelector('.close').click()
-
+    // console.log("Insertado " + JSON.stringify(this.state.values));
+    this.traerTodo();
+    document.querySelector(".close").click();
   }
 
   async traerTodo() {
-console.log(this.state.values)
+    console.log(this.state.values);
     try {
-      let response = await fetch("https://aka-geek.appspot.com/api/publicaciones/", {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(this.state.values), // data can be `string` or {object}!
-        headers:{
-          'Content-Type': 'application/json'
+      let response = await fetch(
+        "https://aka-geek.appspot.com/api/publicaciones/",
+        {
+          method: "POST", // or 'PUT'
+          body: JSON.stringify(this.state.values), // data can be `string` or {object}!
+          headers: {
+            "Content-Type": "application/json"
+          }
         }
-      })
-  
-      let data = await response.json()
-      console.log(data)
-      
+      );
+
+      let data = await response.json();
+      console.log(data);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-   
+
     /*.then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));*/
   }
 
-  handleClick(){
-  
-  }
+  handleClick() {}
 
   render() {
     return (
@@ -79,14 +78,16 @@ console.log(this.state.values)
         <form onSubmit={this.handleSubmit}>
           <div className="container-fluid ">
             <div className="mb-5 pb-2 bg-white mt-5">
-            <a hre="/"
-              className="float color-orange bg-orange mb-5"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              data-whatever="@mdo"
-            >
-              <i className="fa fa-plus my-float text-white "></i><br/>              
-            </a>
+              <a
+                hre="/"
+                className="float color-orange bg-orange mb-5"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                data-whatever="@mdo"
+              >
+                <i className="fa fa-plus my-float text-white "></i>
+                <br />
+              </a>
             </div>
 
             <div
@@ -113,37 +114,34 @@ console.log(this.state.values)
                     </button>
                   </div>
                   <div className="modal-body">
-                      <div className="form-group">
-                        <label
-                          htmlFor="recipient-name"
-                          className="col-form-label"
-                        >
-                          Título:
-                        </label>
-                        <input
-                          onChange={this.handleChange}
-                          type="text"
-                          className="form-control"
-                          name="titulo"
-                          id="titulo"
-                          value={this.state.values.titulo}
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label
-                          htmlFor="message-text"
-                          className="col-form-label"
-                        >
-                          Publicación:
-                        </label>
-                        <textarea
-                          onChange={this.handleChange}
-                          className="form-control"
-                          name="texto"
-                          id="texto"
-                          value={this.state.values.texto}
-                        ></textarea>
-                      </div>
+                    <div className="form-group">
+                      <label
+                        htmlFor="recipient-name"
+                        className="col-form-label"
+                      >
+                        Título:
+                      </label>
+                      <input
+                        onChange={this.handleChange}
+                        type="text"
+                        className="form-control"
+                        name="titulo"
+                        id="titulo"
+                        value={this.state.values.titulo}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="message-text" className="col-form-label">
+                        Publicación:
+                      </label>
+                      <textarea
+                        onChange={this.handleChange}
+                        className="form-control"
+                        name="texto"
+                        id="texto"
+                        value={this.state.values.texto}
+                      ></textarea>
+                    </div>
                   </div>
                   <div className="modal-footer">
                     <button
