@@ -34,9 +34,11 @@ constructor(props) {
   render() {
     return (
       <React.Fragment>
-        <div className="container-fluid text-right pt-5 mt-5">   
+        <div className="container-fluid text-right pt-5 mt-5">
+
         </div>
         <div className="container mb-5">
+        <h2 className="text-center color-orange">Mis publicaciones</h2>
           {!this.state.data
             ? "loading feed..."
             : this.state.data.map((entry, i) => <Card data={entry} key={i} />)}

@@ -47,9 +47,9 @@ export class Card extends Component {
                     entidad => `${entidad.toUpperCase()}/`
                   )}
               </small>
-              <small className="form-text text-muted">1 min</small>
+              <small className="form-text text-muted">5 min</small>
             </div>
-            <h5 className="card-title">
+            <h5 className="card-title color-orange">
               {!this.state.titulo ? "loading..." : this.state.titulo}
             </h5>
             <p className="card-text">
@@ -61,20 +61,20 @@ export class Card extends Component {
                   : this.state.categorias.map(categoria => `#${categoria} `)}
               </span>
             </p>
-            {/* <div className="d-flex justify-content-between pt-3">
+            <div className="d-flex justify-content-between pt-3">
               <div>
                 <i className="fas fa-heart text-danger fa-2x"></i>
               </div>
-              <div>
+              {/* <div>
                 <a href="/" className="btn color-orange border">
                   Comentar
                 </a>
-              </div>
+              </div> */}
             </div>
-            <div className="m-0 p-0">
+            {/* <div className="m-0 p-0">
             <hr className="bg-warning" />
-            </div>
-            <div className="comments_container">
+            </div> */}
+            {/* <div className="comments_container">
               {!this.state.comments ?
                 "loading comments..."
                 :
