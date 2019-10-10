@@ -282,7 +282,7 @@ class Move extends React.Component {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <h6>Pasajeros promedio en el recorrido</h6>
+                  <h6>Pasajeros promedio en el recorrido.</h6>
                   <input
                     type="text"
                     className="form-control text-center line"
