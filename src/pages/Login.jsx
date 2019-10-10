@@ -71,7 +71,7 @@ class Form extends Component {
                       <br />
                       <Link
                         to="/resetPassword"
-                        className="link-form text-login"
+                        className="link-form text-login "
                       >
                         Olvidé mi contraseña
                       </Link>
