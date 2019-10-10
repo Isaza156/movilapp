@@ -23,6 +23,7 @@ import CreatePost from "./pages/CreatePost";
 import Posts from "./pages/Posts";
 import FeedSugerencias from "./pages/Feed_sugerencias";
 import FeedQuejas from "./pages/Feed_quejas";
+import Profile from './pages/Profile'
 
 import NotFound from "./pages/NotFound";
 import Comments from "./components/Comments";
@@ -64,6 +65,7 @@ class App extends React.Component {
           <PrivateRoute exact path="/suggestions" component={Suggestions} />
           <PrivateRoute exact path="/post" component={CreatePost} />
           <PrivateRoute exact path="/posts" component={Posts} />
+          <PrivateRoute exact path="/profile" component={Profile} />
           <Route exact path="/notfound" component={NotFound} />
 
           <Route>

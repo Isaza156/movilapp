@@ -1,7 +1,7 @@
 function userAuth() {
 
     let userIsAuth = true
-    let uid =  "d9a1e65b36dac1f21e6c2be"
+    let uid =  "5d9f516d88727d0d3635678b"
 
     this.getAuth = function () { // publicly available method that a bird object can use
         return userIsAuth;
