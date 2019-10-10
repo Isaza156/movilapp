@@ -11,7 +11,8 @@ export class Card extends Component {
       likes: this.props.data.likes,
       ubicacion: this.props.data.ubicacion,
       titulo: this.props.data.titulo,
-      postid: "postid666"
+      postid: this.props.data._id,
+      time: this.props.data.timestamp
       // postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API
     };
   }
@@ -34,6 +35,11 @@ export class Card extends Component {
     }
   }
 
+  getTimeAgo(){
+    let timeago = Math.floor(( Date.now()-this.state.time)*0.0001)
+    return timeago>60 ? Math.floor(timeago/60)  + " hours": timeago + " min"    
+  }
+
   render() {
     return (
       <>
@@ -47,7 +53,9 @@ export class Card extends Component {
                     entidad => `${entidad.toUpperCase()}/`
                   )}
               </small>
-              <small className="form-text text-muted">1 min</small>
+              <small className="form-text text-muted">
+              {this.getTimeAgo()}
+              </small>
             </div>
             <h5 className="card-title">
               {!this.state.titulo ? "loading..." : this.state.titulo}
