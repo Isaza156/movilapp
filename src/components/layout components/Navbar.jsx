@@ -22,7 +22,7 @@ class Navbar extends React.Component {
           <div className="navbar-collapse collapse" id="collapse">
             <ul className="navbar-nav mr-auto ">
               <li className="nav-item active">
-                <a className="nav-link text-dark" href="/">
+                <a className="nav-link text-dark" href="/profile">
                   Mi perfil <span className="sr-only"></span>
                 </a>
               </li>

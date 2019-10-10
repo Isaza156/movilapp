@@ -1,78 +1,66 @@
-import React from "react";
-// import WOW from "wowjs";
-// import { Link } from "react-router-dom";
-import "../components/styles/move.css";
-import userAuth from "../services/userAuth.service";
-
-class Move extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      uid: userAuth.getId(),
-      caminando: false,
-      bicicleta: false,
-      metro: false,
-      taxi: false,
-      plataformas: false,
-      bus: false,
-      moto: false,
-      carro: false,
-      otro: false,
-      descripcion: "",
-      cilindraje: "",
-      modelo: "",
-      pasajeros: "",
-      check1: false,
-      check2: false
-    };
-    this.onCheckChange = this.onCheckChange.bind(this);
-    this.CheckChange = this.CheckChange.bind(this);
+   // this.onCheckChange = this.onCheckChange.bind(this);
     // this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleClick = this.handleClick.bind(this);
-  }
-  onCheckChange(e) {
-    console.log(e.target.checked);
-    this.setState({
-      [e.target.name]: e.target.checked
-    });
-  }
-  CheckChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
 
-  async handleSubmit(e) {
-    e.preventDefault();
-    try {
-      let response = await fetch(
-        `https://aka-geek.appspot.com/api/usuarios/${this.state.uid}`,
-        {
-          method: "PUT", // or 'PUT'
-          body: JSON.stringify(this.state), // data can be `string` or {object}!
-          headers: {
-            "Content-Type": "application/json"
-          }
-        }
-      );
 
-      let data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
 
-      /*.then(res => res.json())
-      .catch(error => console.error('Error:', error))
-      .then(response => console.log('Success:', response));*/
-    }
-  }
 
-  render() {
-    return (
-      <React.Fragment>
+
+
+
+
+
+
+
+
+
+
+//  handleSubmit(e) {
+//     e.preventDefault();
+    
+//   }
+
+//   onCheckChange(e) {
+//     console.log(e.target.checked);
+//     this.setState({
+//       [e.target.name]: e.target.checked
+//     });
+//   }
+//   CheckChange(e) {
+//     this.setState({
+//       [e.target.name]: e.target.value
+//     });
+//   }
+
+
+
+
+
         <form onSubmit={this.handleSubmit}>
+          <div className="container pt-5 mt-5 wow fadeIn">
+            <h1 className="text-center">Mi perfil </h1>
+            <div className="row ">
+              <div className="col-lg-4 col-md-12 col-12 d-flex justify-content-center">
+                <img className=" img-profile " src={Logo} />
+              </div>
+              <div className="col-lg-8 col-md-12 col-12 text-center mx-auto mt-3">
+                <input
+                  type="text"
+                  className="form-control text-center line mb-3"
+                  placeholder="NOMBRE DE USUARIO"
+                  disabled
+                />
+                <input
+                  type="text"
+                  className="form-control text-center line mb-3"
+                  placeholder="correo electrónico"
+                  disabled
+                />               
+              </div>              
+            </div>
+            <hr />
+            <form onSubmit={this.handleSubmit}>
           <div className="container pt-5 mt-5 wow fadeIn">
             <h2 className="mb-5 text-center">¿Cómo me movilizo?</h2>
             <div className="container row ml-2">
@@ -224,7 +212,7 @@ class Move extends React.Component {
             <div className="container form-check">
               <div className="custom-control custom-radio mr-sm-2 mb-3">
                 <input
-                  type="checkbox"
+                  type="radio"
                   name="check1" //medio de transporte sitio / estudio
                   className="custom-control-input"
                   id="customControlAutosizing10"
@@ -241,11 +229,11 @@ class Move extends React.Component {
               </div>
               <div className="custom-control custom-radio mr-sm-2 mb-3">
                 <input
-                  type="checkbox"
-                  name="check2" //medio de transporte como herramienta de trabajo
+                  type="radio"
+                  name="check1" //medio de transporte como herramienta de trabajo
                   className="custom-control-input"
                   id="customControlAutosizing11"
-                  checked={this.state.check2}
+                  checked={this.state.check1}
                   onChange={this.onCheckChange}
                 />
                 <label
@@ -268,10 +256,7 @@ class Move extends React.Component {
                     <input
                       type="text"
                       className="form-control text-center line"
-                      name="cilindraje"
                       placeholder="125cc"
-                      value={this.state.cilindraje}
-                      onChange={this.CheckChange}
                     />
                   </div>
                   <div className="col-6">
@@ -279,10 +264,7 @@ class Move extends React.Component {
                     <input
                       type="text"
                       className="form-control text-center line"
-                      name="modelo"
                       placeholder="2019"
-                      value={this.state.modelo}
-                      onChange={this.CheckChange}
                     />
                   </div>
                 </div>
@@ -291,10 +273,7 @@ class Move extends React.Component {
                   <input
                     type="text"
                     className="form-control text-center line"
-                    name="pasajeros"
                     placeholder="2"
-                    value={this.state.pasajeros}
-                    onChange={this.CheckChange}
                   />
                 </div>
               </div>
@@ -306,15 +285,13 @@ class Move extends React.Component {
                 className="btn btn-lg  btn-login"
                 onClick={this.handleClick}
               >
-                Iniciar
+                Guardar Cambios
               </button>
               {/* </Link> */}
             </div>
           </div>
         </form>
-      </React.Fragment>
-    );
-  }
-}
+          </div>
+        </form>
 
-export default Move;
+        
