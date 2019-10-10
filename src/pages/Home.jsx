@@ -7,7 +7,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <main className="my-5 wow fadeIn" >
+        <main className="my-5" >
           <div className="bg-color-home">
             <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-home">
               <div className="col-md-5 p-lg-5 mx-auto my-5 bg-color-home">

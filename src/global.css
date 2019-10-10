@@ -83,3 +83,14 @@ body {
 .my-float{
 	margin-top:22px;
 }
+
+.menu{
+  color:black !important;
+}
+
+.menu:hover{
+  color: white !important;
+  background-color: #f28500;
+}
+
+
