@@ -26,7 +26,7 @@ import FeedQuejas from "./pages/Feed_quejas";
 import Profile from './pages/Profile'
 
 import NotFound from "./pages/NotFound";
-import Comments from "./components/Comments";
+
 
 
 class App extends React.Component {

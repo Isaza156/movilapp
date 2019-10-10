@@ -1,5 +1,5 @@
 import React from "react";
-import { MockComment } from "../assets/utils/mocks/comments";
+
 
 class Comments extends React.Component {
   constructor(props) {
