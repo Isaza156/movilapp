@@ -2,8 +2,8 @@ import React from "react";
 import blog from "../components/images/home.jpeg";
 import metro from "../components/images/metro.jpg";
 
-class Home extends React.Component {  
- 
+class Home extends React.Component {
+
   render() {
     return (
       <React.Fragment>
