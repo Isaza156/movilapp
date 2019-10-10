@@ -1,33 +1,18 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import io from 'socket.io-client';
-const socket = io('https://aka-geek.appspot.com');
 
-//inital
-
-const getInitiLocation = async () => {
-    let data = { lat: 0, lng: 0 }
-    await navigator.geolocation.getCurrentPosition(pos => {
-        console.log("iniciando", pos)
-        data = {
-            lat: pos.coords.latitude,
-            lng: pos.coords.longitude
-        }
-    })
-    return data
-}
-
-const globalInitialLocation = getInitiLocation()
+const socket = io('http://aka-geek.appspot.com/');
+// const socket = io('http://localhost:3000/');
 const MY_KEY = 'AIzaSyD1hgxz2s03ONPupb2zMGQjqwkNH7SBt_o' || process.env.MAPS_API_KEY
 
 export class MapWrapper extends Component {
     constructor(props) {
         super(props)
-        console.log('1')
-
         this.state = {
             uid: this.props.data.uid, // my@email.com
-            initialLocation: { ...globalInitialLocation },
+            initialLocation: { lat: 0, lng: 0 },
+
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
@@ -36,12 +21,21 @@ export class MapWrapper extends Component {
                 height: '70%'
             },
         }
+        this.startGeo = this.startGeo.bind(this)
+
+        navigator.geolocation.getCurrentPosition(pos => {
+            this.state.initialLocation = {
+                lat: pos.coords.latitude,
+                lng: pos.coords.longitude
+            }
+            this.forceUpdate()
+        })
+
     }
 
     startGeo() {
-
         if ("geolocation" in navigator) {
-            console.log("location")
+            console.log("init location trakin")
             navigator.geolocation.watchPosition(pos => {
                 let location = {
                     lat: pos.coords.latitude,
@@ -51,38 +45,43 @@ export class MapWrapper extends Component {
                     direction: pos.coords.heading,
                     timestamp: pos.timestamp
                 }
-                console.log(location)
-                this.state["currentLocation"] = { ...location }
-                this.forceUpdate()
+                console.log("se envió", location)
+                this.state.currentLocation = { ...location }
                 socket.emit('new-delta', { ...location, uid: "5d9a1e65b36dac1f21e6c2be" })
+                this.forceUpdate()
             })
         } else { console.log("no location") }
     }
 
 
     render() {
-        console.log("initial", this.state.initialLocation);
-
         const { mapStyles } = this.state
         return (
-            <div className="inner_map_container bg-dark">
+            <>
 
-                <Map
-                    google={this.props.google}
-                    zoom={18}
-                    style={mapStyles}
+                <button
+                    className="mb-5 btn btn-success btn-block btn-lg"
+                    onClick={this.startGeo}>
+                    Iniciar viaje
+                </button>
+                <div className="inner_map_container bg-dark">
+                    <Map
+                        google={this.props.google}
+                        style={mapStyles}
+                        zoom={18}
+                        centerAroundCurrentLocation={true}
+                        center={
+                            (this.state.currentLocation) ?
+                                { ...this.state.currentLocation }
+                                :
+                                { ...this.state.initialLocation }
+                        }
+                    >
 
-                    center={
-                        (this.state.currentLocation) ?
-                            { ...this.state.currentLocation }
-                            :
-                            { ...this.state.initialLocation }
-                    }
-                >
 
-
-                </Map>
-            </div >
+                    </Map>
+                </div>
+            </>
         );
     }
 }
