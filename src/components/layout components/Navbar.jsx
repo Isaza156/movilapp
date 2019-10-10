@@ -27,7 +27,7 @@ class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark" href="/profile">
+                <a className="nav-link text-dark" href="/posts">
                   Mis publicaciones
                 </a>
               </li>

@@ -20,7 +20,7 @@ import Faqs from "./pages/Faqs";
 import Listen from "./pages/Listen";
 import Suggestions from "./pages/Suggestions";
 import CreatePost from "./pages/CreatePost";
-import Profile from "./pages/Profile";
+import Posts from "./pages/Posts";
 import FeedSugerencias from "./pages/Feed_sugerencias";
 import FeedQuejas from "./pages/Feed_quejas";
 
@@ -63,7 +63,7 @@ class App extends React.Component {
           <PrivateRoute exact path="/listen" component={Listen} />
           <PrivateRoute exact path="/suggestions" component={Suggestions} />
           <PrivateRoute exact path="/post" component={CreatePost} />
-          <PrivateRoute exact path="/profile" component={Profile} />
+          <PrivateRoute exact path="/posts" component={Posts} />
           <Route exact path="/notfound" component={NotFound} />
 
           <Route>
