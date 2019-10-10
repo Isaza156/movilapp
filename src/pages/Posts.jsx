@@ -31,6 +31,7 @@ constructor(props) {
     this.traerTodo();
   }
 
+ 
   render() {
     return (
       <React.Fragment>
@@ -42,13 +43,14 @@ constructor(props) {
           {!this.state.data
             ? "loading feed..."
             : this.state.data.map((entry, i) => <Card data={entry} key={i} />)}
+            
 
           {/* <div className="card mt-3">
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <small className="form-text text-muted">METRO</small>
                 <small className="form-text text-muted">5 min</small>
-              </div>
+              </div> 
               <h5 className="card-title">El metro hace muchas paradas</h5>
               <p className="card-text">
                 Normalmente un viaje de san antonio a la estrella demora 25 minutos, pero la mayoría de veces esta demorando mas de 40 minutos porque para antes de llegar a cada estación.
