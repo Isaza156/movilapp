@@ -41,7 +41,7 @@ class Form extends Component {
                       <input
                         type="email"
                         id="inputEmail"
-                        className="form-control input-text  mb-3 text-center input-hover"
+                        className="form-control input-text  mb-3 text-center input-hover text-dark"
                         placeholder="Correo Electrónico"
                         name='email'
                         defaultValue={this.state.email}
@@ -50,7 +50,7 @@ class Form extends Component {
                       <input
                         type="password"
                         id="inputPassword"
-                        className="form-control input-text  mb-3 text-center input-hover"
+                        className="form-control input-text mb-3 text-center input-hover text-dark"
                         placeholder="Contraseña"
                         required
                       />
