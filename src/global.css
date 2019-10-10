@@ -93,4 +93,6 @@ body {
   background-color: #f28500;
 }
 
-
+input{
+  color:black !important;
+}
