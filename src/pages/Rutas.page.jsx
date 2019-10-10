@@ -7,8 +7,19 @@ height: 70vh;
 
 export default class Rutas extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            uid: "5d9a1e65b36dac1f21e6c2be", // my@email.com
+        }
+
+
+    }
+
     iniciarViaje() {
         console.log("iniciado viaje");
+        this.refs.map_wrapper.startGeo();
     }
 
     render() {
@@ -19,7 +30,13 @@ export default class Rutas extends Component {
                         <h1>Velcome to routes</h1>
 
                         <MapContainer>
-                            <MapWrapper />
+                            <MapWrapper
+                                ref="map_wrapper"
+                                data={{
+                                    uid: this.state.uid,
+                                    initialLocation: this.state.initialLocation
+                                }}
+                            />
                         </MapContainer>
 
 
@@ -27,7 +44,7 @@ export default class Rutas extends Component {
                             onClick={this.iniciarViaje}
                             className="btn btn-success btn-block btn-lg">
                             Iniciar viaje
-                    </button>
+                        </button>
                     </div>
                 </div>
             </div >

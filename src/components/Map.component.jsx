@@ -1,32 +1,44 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import io from 'socket.io-client';
+const socket = io('https://aka-geek.appspot.com');
 
-const socket = io('http://localhost:3000/');
+//inital
 
+const getInitiLocation = async () => {
+    let data = { lat: 0, lng: 0 }
+    await navigator.geolocation.getCurrentPosition(pos => {
+        console.log("iniciando", pos)
+        data = {
+            lat: pos.coords.latitude,
+            lng: pos.coords.longitude
+        }
+    })
+    return data
+}
+
+const globalInitialLocation = getInitiLocation()
 const MY_KEY = 'AIzaSyD1hgxz2s03ONPupb2zMGQjqwkNH7SBt_o' || process.env.MAPS_API_KEY
 
 export class MapWrapper extends Component {
     constructor(props) {
         super(props)
+        console.log('1')
+
         this.state = {
+            uid: this.props.data.uid, // my@email.com
+            initialLocation: { ...globalInitialLocation },
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {},
             mapStyles: {
                 width: '100%',
                 height: '70%'
             },
-
-            uid: "5d9a1e65b36dac1f21e6c2be", // my@email.com
-            showingInfoWindow: false,
-            activeMarker: {},
-            selectedPlace: {},
-            initialLocation: {
-                lat: 6.2117408,
-                lng: -75.5986679
-            }
         }
+    }
 
-        navigator.geolocation.getCurrentPosition(pos => console.log(pos))
-
+    startGeo() {
 
         if ("geolocation" in navigator) {
             console.log("location")
@@ -41,14 +53,16 @@ export class MapWrapper extends Component {
                 }
                 console.log(location)
                 this.state["currentLocation"] = { ...location }
+                this.forceUpdate()
                 socket.emit('new-delta', { ...location, uid: "5d9a1e65b36dac1f21e6c2be" })
             })
         } else { console.log("no location") }
     }
 
 
-
     render() {
+        console.log("initial", this.state.initialLocation);
+
         const { mapStyles } = this.state
         return (
             <div className="inner_map_container bg-dark">
@@ -57,26 +71,18 @@ export class MapWrapper extends Component {
                     google={this.props.google}
                     zoom={18}
                     style={mapStyles}
-                    initialCenter={{ ...this.state.initialLocation }}
-                    center={{ ...this.state.currentLocation }}
+
+                    center={
+                        (this.state.currentLocation) ?
+                            { ...this.state.currentLocation }
+                            :
+                            { ...this.state.initialLocation }
+                    }
                 >
 
-                    <Marker
-                        name={'actual'}
-                        position={{ ...this.state.initialLocation }}
-                    />
 
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}
-                        onClose={this.onClose}
-                    >
-                        <div>
-                            <h4>{this.state.selectedPlace.name}</h4>
-                        </div>
-                    </InfoWindow>
                 </Map>
-            </div>
+            </div >
         );
     }
 }
