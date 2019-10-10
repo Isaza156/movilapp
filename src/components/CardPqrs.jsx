@@ -18,7 +18,7 @@ export class Card extends Component {
   }
 
 
-  componentDidMount() {
+  componentDidMount() { 
     this.traerComentarios();
   }
 
