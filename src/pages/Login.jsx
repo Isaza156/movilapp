@@ -82,9 +82,7 @@ export default class Form extends Component {
                 </button> */}
             </form>
 
-            <Link to="/resetPassword" className="link-form text-login">
-              Olvidé mi contraseña
-            </Link>
+
             <Link to="/account" style={{ textDecoration: "none" }}>
               <button className="btn btn-lg btn-login btn-block rounded-pill">
                 Crear una cuenta
@@ -93,7 +91,9 @@ export default class Form extends Component {
             <Link to="/home" className="d-none" id="login_to_home"></Link>
 
             <br />
-
+            <Link to="/resetPassword" className="link-form text-login">
+              Olvidé mi contraseña
+            </Link>
             {/* <Link to="" className="link-form text-login">
               Crear una cuenta
             </Link> */}
