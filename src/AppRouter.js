@@ -50,7 +50,7 @@ class App extends React.Component {
           <Route exact path="/newpassword" component={NewPassword} />
           <Route exact path="/validatecode" component={ValidateCode} />
 
-          <PrivateRoute exact path="/move" component={Move} />
+          <Route exact path="/move" component={Move} />
 
           <PrivateRoute exact path="/contact" component={Contact} />
           <PrivateRoute exact path="/faqs" component={Faqs} />

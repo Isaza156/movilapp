@@ -37,6 +37,11 @@ class Navbar extends React.Component {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link menu" to="/post">
+                  Mis Publicaciones
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link menu" to="/faqs">
                   Ayuda
                 </Link>
