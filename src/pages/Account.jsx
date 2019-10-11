@@ -9,6 +9,36 @@ class Form extends Component {
       live: false
     }).init();
   }
+
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   // console.log("Insertado " + JSON.stringify(this.state.values));
+  //   this.traerTodo();
+  // }
+  async traerTodo() {
+    try {
+      let response = await fetch("https://aka-geek.appspot.com/api/usuarios",{
+        mode: 'no-cors',
+        method: "POST", // or 'PUT'
+        body: JSON.stringify(this.state), // data can be `string` or {object}!
+        headers: {
+          'Accept': 'application/json',
+          "Content-Type": "application/json"
+        }
+     }
+    );
+    
+    let data = await response.json();
+    console.log(data);
+  }catch (error){
+    console.error(error);
+  } 
+
+  }
+  componentDidMount() {
+    this.traerTodo();
+  }
+  
   render() {
     return (
       <React.Fragment>

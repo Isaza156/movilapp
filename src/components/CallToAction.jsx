@@ -42,7 +42,6 @@ class CallToAction extends React.Component {
     e.preventDefault();
     // console.log("Insertado " + JSON.stringify(this.state.values));
     this.traerTodo();
-    document.querySelector(".close").click();
   }
 
   async traerTodo() {
