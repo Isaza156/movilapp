@@ -77,10 +77,6 @@ export default class Form extends Component {
               <br />
 
 
-              <button className="btn btn-lg btn-login btn-block rounded-pill">
-                Crear una cuenta
-                </button>
-
               {/* <button className="btn btn-lg btn-login btn-block rounded-pill">
                   <i className="fab fa-google"></i> Sign in with Google
                 </button> */}
@@ -89,7 +85,11 @@ export default class Form extends Component {
             <Link to="/resetPassword" className="link-form text-login">
               Olvidé mi contraseña
             </Link>
-
+            <Link to="/account" style={{ textDecoration: "none" }}>
+              <button className="btn btn-lg btn-login btn-block rounded-pill">
+                Crear una cuenta
+                </button>
+            </Link>
             <Link to="/home" className="d-none" id="login_to_home"></Link>
 
             <br />

@@ -30,7 +30,7 @@ export default class Rutas extends Component {
                     <div className="col col-10 col-lg-7 mx-auto text-center mt-3">
 
 
-                        <h1>Velcome to routes</h1>
+                        <h1>Comparte tus rutas!!</h1>
                         {/* 
                         <button
                             className="mb-5 btn btn-success btn-block btn-lg"

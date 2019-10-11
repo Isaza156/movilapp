@@ -33,7 +33,7 @@ class Navbar extends React.Component {
               </li>
               <li className="nav-item">
                 <Link className="nav-link menu" to="/misaportes">
-                  Mis Aposter
+                  Mis Aportes
                 </Link>
               </li>
               <li className="nav-item">
