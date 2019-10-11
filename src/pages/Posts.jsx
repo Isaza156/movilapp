@@ -31,7 +31,6 @@ constructor(props) {
     this.traerTodo();
   }
 
- 
   render() {
     return (
       <React.Fragment>
