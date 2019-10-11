@@ -14,7 +14,7 @@ const Footer = () => (
   <footer className="footer bg-white border-top text-center">
     <FlexContainer>
 
-      <Link to="/trayectos" className="text-dark footer_item_container">
+      <Link to="/rutas" className="text-dark footer_item_container">
         <i className="fas fa-road color-orange"></i>
         <br /> Trayectos
       </Link>

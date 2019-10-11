@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
 }
 
 .footer_item_container{
@@ -95,4 +101,7 @@ body {
 
 input{
   color:black !important;
+}
+.max-h-100{
+  max-height: 100%
 }
