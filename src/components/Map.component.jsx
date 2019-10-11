@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import userAuth from "../services/userAuth.service";
+
 import io from 'socket.io-client';
 
-const socket = io('http://aka-geek.appspot.com/');
-// const socket = io('http://localhost:3000/');
+// const socket = io('http://aka-geek.appspot.com/');
+const socket = io('http://localhost:3000/');
 const MY_KEY = 'AIzaSyD1hgxz2s03ONPupb2zMGQjqwkNH7SBt_o' || process.env.MAPS_API_KEY
 
 export class MapWrapper extends Component {
@@ -22,6 +24,10 @@ export class MapWrapper extends Component {
             },
         }
         this.startGeo = this.startGeo.bind(this)
+        this.endGeo = this.endGeo.bind(this)
+        this.toggleBtn = this.toggleBtn.bind(this)
+
+
 
         navigator.geolocation.getCurrentPosition(pos => {
             this.state.initialLocation = {
@@ -33,9 +39,17 @@ export class MapWrapper extends Component {
 
     }
 
+    toggleBtn() {
+        document.querySelector('#map_btn_init').classList.toggle('d-none')
+        document.querySelector('#map_btn_end').classList.toggle('d-none')
+        navigator.geolocation.clearWatch()
+    }
+
     startGeo() {
+        this.toggleBtn()
+        socket.emit('started_trip', this.state.uid)
         if ("geolocation" in navigator) {
-            console.log("init location trakin")
+            console.log("location is active")
             navigator.geolocation.watchPosition(pos => {
                 let location = {
                     lat: pos.coords.latitude,
@@ -45,12 +59,18 @@ export class MapWrapper extends Component {
                     direction: pos.coords.heading,
                     timestamp: pos.timestamp
                 }
-                console.log("se envió", location)
+                console.log(location)
                 this.state.currentLocation = { ...location }
-                socket.emit('new-delta', { ...location, uid: "5d9a1e65b36dac1f21e6c2be" })
+                socket.emit('new-delta', { ...location })
                 this.forceUpdate()
             })
-        } else { console.log("no location") }
+        } else { console.log("ERR: no location is possible") }
+    }
+
+    endGeo() {
+        this.toggleBtn()
+        socket.disconnect()
+        console.log("socket is out");
     }
 
 
@@ -60,10 +80,19 @@ export class MapWrapper extends Component {
             <>
 
                 <button
+                    id="map_btn_init"
                     className="mb-5 btn btn-success btn-block btn-lg"
                     onClick={this.startGeo}>
                     Iniciar viaje
                 </button>
+
+                <button
+                    id="map_btn_end"
+                    className="mb-5 btn btn-danger btn-block btn-lg d-none"
+                    onClick={this.endGeo}>
+                    Terminar viaje
+                </button>
+
                 <div className="inner_map_container bg-dark">
                     <Map
                         google={this.props.google}
