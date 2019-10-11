@@ -1,19 +1,13 @@
 import React from "react";
-import WOW from "wowjs";
 import blog from "../components/images/home.jpeg";
 import metro from "../components/images/metro.jpg";
 
 class Home extends React.Component {
-  
-  componentDidMount() {
-    new WOW.WOW({
-      live: false
-    }).init();
-  }
+
   render() {
     return (
       <React.Fragment>
-        <main className="my-5 wow fadeIn" >
+        <main className="my-5" >
           <div className="bg-color-home">
             <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-home">
               <div className="col-md-5 p-lg-5 mx-auto my-5 bg-color-home">
@@ -23,7 +17,7 @@ class Home extends React.Component {
                 <p className="lead font-weight-normal"></p>
                 <a
                   className="btn bg-orange text-white shadow font-weight-bold mt-4"
-                  href="https://wa.me/"
+                  href="/suggestions"
                 >
                   Tengo una idea
                 </a>

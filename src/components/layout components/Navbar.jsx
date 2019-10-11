@@ -4,7 +4,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-dark bg-white fixed-top border-bottom">
+        <nav className="navbar navbar-dark bg-white fixed-top border-bottom text-center">
           <a className="navbar-brand" href="/">
           </a>
           <button
@@ -22,18 +22,23 @@ class Navbar extends React.Component {
           <div className="navbar-collapse collapse" id="collapse">
             <ul className="navbar-nav mr-auto ">
               <li className="nav-item active">
-                <a className="nav-link text-dark" href="/">
+                <a className="nav-link menu" href="/profile">
                   Mi perfil <span className="sr-only"></span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark" href="/">
-                  Mis aportes
+                <a className="nav-link menu" href="/posts">
+                  Mis publicaciones
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark" href="/">
+                <a className="nav-link menu" href="/faqs">
                   Ayuda
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link menu" href="/login">
+                  Cerrar Sesión
                 </a>
               </li>
             </ul>

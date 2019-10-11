@@ -14,18 +14,21 @@ import NewPassword from "./pages/NewPassword";
 import ValidateCode from "./pages/ValidateCode";
 
 import Home from "./pages/Home";
-import Pqrs from "./pages/Pqrs";
+
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import Listen from "./pages/Listen";
 import Suggestions from "./pages/Suggestions";
 import CreatePost from "./pages/CreatePost";
-
+import Posts from "./pages/Posts";
 import FeedSugerencias from "./pages/Feed_sugerencias";
 import FeedQuejas from "./pages/Feed_quejas";
+import Profile from './pages/Profile'
+
+import Rutas from './pages/Rutas.page'
 
 import NotFound from "./pages/NotFound";
-import Comments from "./components/Comments";
+
 
 
 class App extends React.Component {
@@ -55,14 +58,19 @@ class App extends React.Component {
 
           <PrivateRoute exact path="/sugerencias" component={FeedSugerencias} />
           <PrivateRoute exact path="/quejas" component={FeedQuejas} />
-
-          <PrivateRoute exact path="/pqrs" component={Pqrs} />
           <PrivateRoute exact path="/createpost" component={CreatePost} />
+
+
+
 
           <PrivateRoute exact path="/home" component={Home} />
           <PrivateRoute exact path="/listen" component={Listen} />
           <PrivateRoute exact path="/suggestions" component={Suggestions} />
           <PrivateRoute exact path="/post" component={CreatePost} />
+          <PrivateRoute exact path="/posts" component={Posts} />
+          <PrivateRoute exact path="/profile" component={Profile} />
+
+          <PrivateRoute exact path="/rutas" component={Rutas} />
 
           <Route exact path="/notfound" component={NotFound} />
 
