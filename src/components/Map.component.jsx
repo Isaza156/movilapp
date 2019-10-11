@@ -5,7 +5,7 @@ import userAuth from "../services/userAuth.service";
 import io from 'socket.io-client';
 let nav_geo_temp_id;
 
-const socket = io('http://aka-geek.appspot.com/');
+const socket = io('https://aka-geek.appspot.com/');
 // const socket = io('http://localhost:3000/');
 
 const MY_KEY = 'AIzaSyD1hgxz2s03ONPupb2zMGQjqwkNH7SBt_o' || process.env.MAPS_API_KEY
