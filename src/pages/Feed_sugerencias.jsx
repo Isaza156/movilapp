@@ -16,9 +16,9 @@ export default class FeedSugerencias extends React.Component {
       let data = await fetch("https://aka-geek.appspot.com/api/publicaciones/");
       data = await data.json();
 
-      data = data.filter(post => post.esQueja === false).sort((b, a) =>  a.timestamp - b.timestamp );
-        
-        
+      data = data
+        .filter(post => post.esQueja === false)
+        .sort((b, a) => a.timestamp - b.timestamp);
 
       console.log(data);
 
@@ -42,16 +42,11 @@ export default class FeedSugerencias extends React.Component {
           </Link>
         </div>
         <div className="container mb-5">
-          {
-            !this.state.data?
-            "loading feed..."
-            :
-            this.state.data.map(
-              (entry, i) => <Card data={entry} key={i} />
-              )
-          }
+          {!this.state.data
+            ? "loading feed..."
+            : this.state.data.map((entry, i) => <Card data={entry} key={i} />)}
         </div>
-        <CallToAction laQueja={this.state.esQueja}  />
+        <CallToAction laQueja={this.state.esQueja} />
       </React.Fragment>
     );
   }

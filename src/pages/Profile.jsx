@@ -40,9 +40,9 @@ class Profile extends React.Component {
       let data = await res.json();
       delete data._id;
       delete data.uid;
-      const data2 = {...data}
+      const data2 = { ...data };
 
-      console.log(data2)
+      console.log(data2);
       this.setState({ ...data });
 
       console.log("estado es:", this.state);
@@ -81,6 +81,7 @@ class Profile extends React.Component {
       );
       let data = await response.json();
       console.log(data);
+      await document.querySelector("#linkProfile").click();
     } catch (error) {
       console.error(error);
 
@@ -321,7 +322,6 @@ class Profile extends React.Component {
               </div>
             </div>
             <div className="container text-center mb-5 pb-3">
-              {/* <Link to="/home"> */}
               <button
                 type="submit"
                 className="btn btn-lg  btn-login"
@@ -329,7 +329,7 @@ class Profile extends React.Component {
               >
                 Guardar Cambios
               </button>
-              {/* </Link> */}
+              <Link to="/home" id="linkProfile" className="d-none"></Link>
             </div>
           </div>
         </form>
