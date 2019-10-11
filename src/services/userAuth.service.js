@@ -26,7 +26,7 @@ function userAuth() {
 
       let authData = await response.json();
 
-      if (response.status == 400) return authData.authRes;
+      if (response.status === 400) return authData.authRes;
 
       userIsAuth = true;
       userId = authData;
@@ -37,7 +37,11 @@ function userAuth() {
   };
 
   this.getId = function() {
-    return uid;
+    return userId;
+  };
+
+  this.logout = function() {
+    userIsAuth = false;
   };
 }
 
