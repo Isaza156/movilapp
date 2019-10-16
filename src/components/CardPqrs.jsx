@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 //import Comments from './Comments'
+import { Link } from 'react-router-dom';
 
 export class Card extends Component {
   constructor(props) {
@@ -12,17 +13,18 @@ export class Card extends Component {
       ubicacion: this.props.data.ubicacion,
       titulo: this.props.data.titulo,
       postid: this.props.data._id,
-      time: this.props.data.timestamp
-      // postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API..
+      time: this.props.data.timestamp,
+      postid: this.props.data._id // USAR ESTE PARA QUE LA APP FUNCIONE CUANDO YA SE CONECTEN LOS OTROS METODOS DE LA API..
     };
-  }
 
+
+
+    this.eliminar = this.eliminar.bind(this)
+  }
 
   componentDidMount() { 
     this.traerComentarios();
   }
-
-
 
   async traerComentarios() {
     try {
@@ -34,6 +36,25 @@ export class Card extends Component {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  async eliminar() {
+    try {
+      let response = await fetch( `https://aka-geek.appspot.com/api/publicaciones/${this.state.postid}`, {
+          method: "DELETE", // or 'PUT'
+        }
+      );
+      let data = await response.json();
+      await document.querySelector("#eliminar").click();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+    
+
+    /*.then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));*/
   }
 
   getTimeAgo(){
@@ -74,6 +95,8 @@ export class Card extends Component {
               <div>
                 <i className="fas fa-heart text-danger fa-2x"></i>
               </div>
+              <button onClick={this.eliminar} >Eliminar</button>
+              <Link to="/posts" id="eliminar" className="d-none"></Link>
               {/* <div>
                 <a href="/" className="btn color-orange border">
                   Comentar

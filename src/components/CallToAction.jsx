@@ -1,5 +1,6 @@
 import React from "react";
 import userAuth from "../services/userAuth.service";
+import { Link } from "react-router-dom";
 
 class CallToAction extends React.Component {
   constructor(props) {
@@ -48,7 +49,9 @@ class CallToAction extends React.Component {
   async traerTodo() {
     console.log(this.state.values);
     try {
-      let response = await fetch( "https://aka-geek.appspot.com/api/publicaciones/", {
+      let response = await fetch(
+        "https://aka-geek.appspot.com/api/publicaciones/",
+        {
           method: "POST", // or 'PUT'
           body: JSON.stringify(this.state.values), // data can be `string` or {object}!
           headers: {
@@ -59,6 +62,7 @@ class CallToAction extends React.Component {
 
       let data = await response.json();
       console.log(data);
+      await document.querySelector("#linkModal").click();
     } catch (error) {
       console.error(error);
     }
@@ -119,6 +123,7 @@ class CallToAction extends React.Component {
                       >
                         Título:
                       </label>
+
                       <input
                         onChange={this.handleChange}
                         type="text"
@@ -156,6 +161,7 @@ class CallToAction extends React.Component {
                     >
                       Enviar
                     </button>
+                    <Link to="/home" id="linkModal" className="d-none"></Link>
                   </div>
                 </div>
               </div>

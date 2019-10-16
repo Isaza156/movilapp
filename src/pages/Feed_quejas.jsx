@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-
+import { Link } from "react-router-dom";
 import Card from "../components/CardPqrs";
 import CallToAction from "../components/CallToAction";
 
@@ -8,7 +7,7 @@ export default class FeedQuejas extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      esQueja : true,
+      esQueja: true
     };
   }
 
@@ -17,7 +16,9 @@ export default class FeedQuejas extends React.Component {
       let data = await fetch("https://aka-geek.appspot.com/api/publicaciones/");
       data = await data.json();
 
-      data = data.filter(post => post.esQueja === true)
+      data = data
+        .filter(post => post.esQueja === true)
+        .sort((b, a) => a.timestamp - b.timestamp);
       console.log(data);
 
       this.setState({ data });
@@ -29,14 +30,13 @@ export default class FeedQuejas extends React.Component {
   componentDidMount() {
     this.traerTodo();
   }
-  
 
   render() {
     return (
       <React.Fragment>
         <div className="container-fluid text-left pt-5 mt-5">
-          <Link to='/sugerencias' className="align-top text-dark">
-          <li className="fas fa-chevron-left fa-2x color-orange align-middle"></li>
+          <Link to="/sugerencias" className="align-top text-dark">
+            <li className="fas fa-chevron-left fa-2x color-orange align-middle"></li>
             Ir a Sugerencias
           </Link>
         </div>
@@ -89,9 +89,8 @@ export default class FeedQuejas extends React.Component {
           </div> */}
         </div>
 
-        <CallToAction laQueja = {this.state.esQueja}/>
+        <CallToAction laQueja={this.state.esQueja} />
       </React.Fragment>
     );
   }
 }
-

@@ -1,6 +1,6 @@
 import React from "react";
 // import WOW from "wowjs";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../components/styles/move.css";
 import userAuth from "../services/userAuth.service";
 
@@ -30,7 +30,7 @@ class Move extends React.Component {
     this.CheckChange = this.CheckChange.bind(this);
     // this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
+   //  this.handleClick = this.handleClick.bind(this);
   }
   onCheckChange(e) {
     console.log(e.target.checked);
@@ -45,6 +45,7 @@ class Move extends React.Component {
   }
 
   async handleSubmit(e) {
+
     e.preventDefault();
     try {
       let response = await fetch(
@@ -60,7 +61,9 @@ class Move extends React.Component {
 
       let data = await response.json();
       console.log(data);
+      await document.querySelector('#linkMove').click();
     } catch (error) {
+      
       console.error(error);
 
       /*.then(res => res.json())
@@ -68,6 +71,10 @@ class Move extends React.Component {
       .then(response => console.log('Success:', response));*/
     }
   }
+
+  // handleClick(){
+  //   document.querySelector('#linkMove').click();    
+  // }
 
   render() {
     return (
@@ -300,7 +307,7 @@ class Move extends React.Component {
               </div>
             </div>
             <div className="container text-center mb-5 pb-3">
-              {/* <Link to="/home"> */}
+              
               <button
                 type="submit"
                 className="btn btn-lg  btn-login"
@@ -308,7 +315,8 @@ class Move extends React.Component {
               >
                 Iniciar
               </button>
-              {/* </Link> */}
+              <Link to="/home" id="linkMove" className="d-none"> 
+               </Link> 
             </div>
           </div>
         </form>
