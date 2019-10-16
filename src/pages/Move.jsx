@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../components/styles/move.css";
 import userAuth from "../services/userAuth.service";
+import { log } from "util";
 
 class Move extends React.Component {
   constructor(props) {
@@ -45,11 +46,15 @@ class Move extends React.Component {
   }
 
   async handleSubmit(e) {
-
     e.preventDefault();
+   const url =  `https://aka-geek.appspot.com/api/usuarios/${this.state.uid}`
+
+    console.log('====================================');
+    console.log(this.state.uid);
+    console.log('====================================');
     try {
       let response = await fetch(
-        `https://aka-geek.appspot.com/api/usuarios/${this.state.uid}`,
+       url,
         {
           method: "PUT", // or 'PUT'
           body: JSON.stringify(this.state), // data can be `string` or {object}!
@@ -65,16 +70,9 @@ class Move extends React.Component {
     } catch (error) {
       
       console.error(error);
-
-      /*.then(res => res.json())
-      .catch(error => console.error('Error:', error))
-      .then(response => console.log('Success:', response));*/
+      
     }
   }
-
-  // handleClick(){
-  //   document.querySelector('#linkMove').click();    
-  // }
 
   render() {
     return (
@@ -307,7 +305,6 @@ class Move extends React.Component {
               </div>
             </div>
             <div className="container text-center mb-5 pb-3">
-              
               <button
                 type="submit"
                 className="btn btn-lg  btn-login"

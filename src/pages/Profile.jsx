@@ -34,7 +34,7 @@ class Profile extends React.Component {
   async traerComentarios() {
     try {
       let res = await fetch(
-        `https://aka-geek.appspot.com/api/usuarios/${userAuth.getId()}`
+        `http://192.168.0.113:3000/api/usuarios/${userAuth.getId()}`
       );
 
       let data = await res.json();

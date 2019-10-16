@@ -2,29 +2,71 @@ import React, { Component } from "react";
 import WOW from "wowjs";
 import "../components/styles/account.css";
 import { Link } from "react-router-dom";
+import userAuthService from "../services/userAuth.service";
 
 class Form extends Component {
-  componentDidMount() {
+    constructor(props) {
+      super(props);
+      this.state = {
+        name:"",
+        password:"",
+        email:"",
+        phone:"",
+        confirm_password:""
+      };
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+
+    handleChange(e){
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+
+    async handleSubmit(e) {
+      e.preventDefault();
+      let response = await userAuthService.register(this.state);
+      if (!response.error) {
+        console.log(response.id);
+        await userAuthService.setId(response.id)
+        await userAuthService.setHardAuth()
+
+        return await document.querySelector('#linkAccount').click();
+      }
+
+      let notification = document.querySelector("#notification")
+      notification.classList.remove("d-none");
+      notification.innerHTML = response.message;
+    }
+
+    componentDidMount() {
     new WOW.WOW({
       live: false
     }).init();
   }
+
   render() {
     return (
       <React.Fragment>
-        <div className="bg-login wow fadeIn ">
+        <form className="bg-login wow fadeIn " onSubmit={this.handleSubmit}>
           <div className="container ">
               <div className="row">
                 <div className="col-lg-8 col-sm-12 col-xs-12 m-auto">
                   <div className="register Login text-center mt-5"></div>
                   <div className="text-center">
                     <i className="fas fa-user-circle fa-5x text-login"></i>
-                    <form className="mt-5 ml-5 mr-5 pb-3">
+                    <div id="notification" className="alert alert-danger d-none"></div>
+                    <div className="mt-5 ml-5 mr-5 pb-3">
                       <input
                         type="text"
                         id="inputName"
                         className="form-control input-text mb-2 input-hover"
                         placeholder="Nombre de usuario* "
+                        name="name"
+                        value={this.state.name}
+                        onChange={this.handleChange}
                         required
                       />
                       <input
@@ -32,13 +74,19 @@ class Form extends Component {
                         id="inputEmail"
                         className="form-control input-text mb-2 input-hover"
                         placeholder="Correo electrónico* "
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
                         required
                       />
                       <input
-                        type="tel"
+                        type="text"
                         id="inputPhone"
                         className="form-control input-text mb-2 input-hover"
                         placeholder="Numero de teléfono* "
+                        name="phone"
+                        value={this.state.phone}
+                        onChange={this.handleChange}
                         required
                       />
                       <input
@@ -46,6 +94,9 @@ class Form extends Component {
                         id="inputPassword"
                         className="form-control input-text mb-2 input-hover"
                         placeholder="Contraseña* "
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
                         required
                       />
                       <input
@@ -53,6 +104,9 @@ class Form extends Component {
                         id="confirmPassword"
                         className="form-control input-text mb-2 input-hover"
                         placeholder="Confirmar contraseña* "
+                        name="confirm_password"
+                        value={this.state.confirm_password}
+                        onChange={this.handleChange}
                         required
                       />
                       <input
@@ -69,13 +123,14 @@ class Form extends Component {
                         </small>
                       </span>
                       <br />
-                      <Link to="/move">
                         <button
                           className="btn btn-login btn-lg text-login mt-5 mb-3 rounded-pill"
                           type="submit"
+                          onClick={this.handleClick}
                         >
                           Crear cuenta
                         </button>
+                        <Link to="/move" id="linkAccount" className="d-none">
                       </Link>
                       <br />
                       <Link to="/login" className="link-form text-login ">
@@ -83,12 +138,12 @@ class Form extends Component {
                       </Link>
                       <br />
                       <br />
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
           </div>
-        </div>
+        </form>
       </React.Fragment>
     );
   }
